@@ -71,7 +71,8 @@ export default function Hero() {
       {/* Bottom row */}
       <div ref={r2} className="fade-up flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <p className="max-w-sm text-sm leading-relaxed" style={{ color: 'var(--muted2)' }}>
-          UI/UX Designer & Frontend Developer based in Indonesia. I turn complex problems into clean, intuitive interfaces.
+          UI/UX Designer & Frontend Developer based in Indonesia.
+          I turn complex problems into clean, intuitive interfaces.
         </p>
 
         {/* Stats */}
