@@ -11,9 +11,8 @@ export default function Footer() {
       </p>
       <div className="flex gap-6">
         {[
-          ['GitHub', 'https://github.com/yourusername'],
-          ['Dribbble', 'https://dribbble.com/yourprofile'],
-          ['LinkedIn', 'https://linkedin.com/in/yourprofile'],
+          ['GitHub', 'https://github.com/dimasdew'],
+          ['LinkedIn', 'https://linkedin.com/in/dimas-soebrata-0b020a392/'],
         ].map(([label, href]) => (
           <a
             key={label}
