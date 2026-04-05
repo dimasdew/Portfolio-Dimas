@@ -57,7 +57,7 @@ export default function Contact() {
 
       <div ref={r3} className="fade-up flex gap-4 justify-center flex-wrap">
         <a
-          href="mailto:hello@yourname.com"
+          href="mailto:dimasdewantara50@gmail.com"
           className="inline-flex items-center gap-2 font-semibold text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200"
           style={{ background: 'var(--accent)', color: '#0a0a0a' }}
           onMouseEnter={e => {
@@ -72,7 +72,7 @@ export default function Contact() {
           Say hello ↗
         </a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://linkedin.com/in/dimas-soebrata-0b020a392/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 font-medium text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200"
