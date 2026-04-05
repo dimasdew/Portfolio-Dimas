@@ -39,7 +39,7 @@ export default function Navbar() {
           </Link>
         ))}
         <a
-          href="dimassoebrata@gmail.com"
+          href="mailto:dimasdewantara50@gmail.com"
           className="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200"
           style={{ background: 'var(--accent)', color: '#0a0a0a' }}
           onMouseEnter={e => e.currentTarget.style.background = 'var(--accent2)'}
