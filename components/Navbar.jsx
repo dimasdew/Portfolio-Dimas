@@ -22,7 +22,7 @@ export default function Navbar() {
       }}
     >
       <div className="font-display font-bold text-lg tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-        A<span style={{ color: 'var(--accent)' }}>.</span>DEV
+        Dimas Dew<span style={{ color: 'var(--accent)' }}>.</span>DEV
       </div>
 
       <div className="hidden md:flex items-center gap-10">
