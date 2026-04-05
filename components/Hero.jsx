@@ -50,7 +50,7 @@ export default function Hero() {
         style={{ color: 'var(--accent)' }}
       >
         <span className="block w-8 h-px" style={{ background: 'var(--accent)' }} />
-        Available for freelance
+        Available for work
       </div>
 
       {/* Title */}
@@ -76,7 +76,7 @@ export default function Hero() {
 
         {/* Stats */}
         <div className="flex gap-12">
-          {[['8+', 'Projects done'], ['2+', 'Years exp.']].map(([num, label]) => (
+          {[['5+', 'Projects done'], ['2+', 'Years exp.']].map(([num, label]) => (
             <div key={label}>
               <div
                 className="font-display font-bold text-4xl leading-none"
