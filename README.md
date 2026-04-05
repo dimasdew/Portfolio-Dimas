@@ -9,9 +9,9 @@
 
 ## 👋 About
 
-Hi, I'm **[imas Dew** — a self-taught UI/UX Designer and Frontend Developer passionate about the intersection of great design and clean code. I believe beautiful interfaces should also be fast, accessible, and delightful to use.
+Hi, I'm **Dimas Dew** — a self-taught UI/UX Designer and Frontend Developer passionate about the intersection of great design and clean code. I believe beautiful interfaces should also be fast, accessible, and delightful to use.
 
-I'm currently building my portfolio and open to freelance projects and collaboration opportunities.
+I'm currently building my portfolio and open to work projects and collaboration opportunities.
 
 ---
 
