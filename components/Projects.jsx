@@ -139,12 +139,12 @@ export default function Projects() {
           </h2>
         </div>
         
-          href="#"
+         href="#"
           className="text-sm flex items-center gap-2 transition-all duration-200"
           style={{ color: 'var(--muted2)' }}
           onMouseEnter={e => e.currentTarget.style.color = 'var(--text)'}
           onMouseLeave={e => e.currentTarget.style.color = 'var(--muted2)'}
-        >
+        
           View all work →
         </a>
       </div>
