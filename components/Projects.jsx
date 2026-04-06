@@ -33,14 +33,7 @@ function ProjectCard({ project, delay = 0 }) {
       onMouseEnter={e => e.currentTarget.style.background = 'var(--bg3)'}
       onMouseLeave={e => e.currentTarget.style.background = 'var(--bg)'}
     >
-      {project.image ? (
-        <Image
-        src={project.image}
-        alt={project.name}
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      ) : (
+      {/* Image area */}
       <div
         className="w-full rounded-md overflow-hidden relative"
         style={{
@@ -49,16 +42,25 @@ function ProjectCard({ project, delay = 0 }) {
           background: 'var(--bg3)',
         }}
       >
-        <div
-          className="w-full h-full flex items-center justify-center font-display font-black text-5xl tracking-tight transition-transform duration-500 group-hover:scale-105"
-          style={{
-            fontFamily: 'Syne, sans-serif',
-            background: project.bgColor,
-            color: project.bgTextColor,
-          }}
-        >
-          {project.bgText}
-        </div>
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.name}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center font-display font-black text-5xl tracking-tight transition-transform duration-500 group-hover:scale-105"
+            style={{
+              fontFamily: 'Syne, sans-serif',
+              background: project.bgColor,
+              color: project.bgTextColor,
+            }}
+          >
+            {project.bgText}
+          </div>
+        )}
       </div>
 
       {/* Meta row */}
@@ -136,7 +138,7 @@ export default function Projects() {
             Projects
           </h2>
         </div>
-        <a
+        
           href="#"
           className="text-sm flex items-center gap-2 transition-all duration-200"
           style={{ color: 'var(--muted2)' }}
