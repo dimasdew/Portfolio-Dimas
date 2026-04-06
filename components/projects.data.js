@@ -8,7 +8,6 @@ const projects = [
     featured: true,
     accent: true,
     href: 'https://portfolio-firee.vercel.app',
-    bgColor: 'linear-gradient(135deg, #0d0d1f 0%, #131328 100%)',
     image: '/images/firee.png',
     bgText: '01',
     bgTextColor: 'rgba(130,80,255,0.15)',
