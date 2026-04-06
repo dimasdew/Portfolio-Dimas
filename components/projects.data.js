@@ -13,7 +13,6 @@ const projects = [
   bgText: '02',
   bgTextColor: 'rgba(130,80,255,0.15)',
 },
-},
   {
     id: 2,
     name: 'Finance Dashboard App',
