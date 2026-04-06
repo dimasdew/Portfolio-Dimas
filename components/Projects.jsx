@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect, useRef } from 'react',
-import Link from 'next/link',
-import Image from 'next/image',
+import { useEffect, useRef } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import projects from './projects.data'
 
 function ProjectCard({ project, delay = 0 }) {
