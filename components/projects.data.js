@@ -1,18 +1,18 @@
 // Edit this file to update projects.
 const projects = [
   {
-  id: 1,
-  name: 'Firee — Decentralized Marketplace',
-  desc: 'End-to-end design and development of a decentralized marketplace. Dark, minimalist UI built with Next.js 14 and Tailwind CSS.',
-  tags: ['Next.js', 'Tailwind CSS', 'Web3'],
-  featured: true,
-  accent: true,
-  href: 'https://portfolio-firee.vercel.app',
-  image: '/images/firee.png',
-  bgColor: 'linear-gradient(135deg, #0d0d1f 0%, #131328 100%)',
-  bgText: '02',
-  bgTextColor: 'rgba(130,80,255,0.15)',
-},
+    id: 1,
+    name: 'Firee — Decentralized Marketplace',
+    desc: 'End-to-end design and development of a decentralized marketplace. Dark, minimalist UI built with Next.js 14 and Tailwind CSS.',
+    tags: ['Next.js', 'Tailwind CSS', 'Web3'],
+    featured: true,
+    accent: true,
+    href: 'https://portfolio-firee.vercel.app',
+    image: '/images/firee.png',
+    bgColor: 'linear-gradient(135deg, #0d0d1f 0%, #131328 100%)',
+    bgText: '01',
+    bgTextColor: 'rgba(130,80,255,0.15)',
+  },
   {
     id: 2,
     name: 'Finance Dashboard App',
@@ -22,7 +22,7 @@ const projects = [
     accent: false,
     href: '#',
     bgColor: 'linear-gradient(135deg, #1a1a1a 0%, #0d1f0d 100%)',
-    bgText: '01',
+    bgText: '02',
     bgTextColor: 'rgba(200,240,74,0.15)',
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     featured: false,
     href: '#',
     bgColor: 'linear-gradient(135deg, #0d0d1f 0%, #131328 100%)',
-    bgText: '02',
+    bgText: '03',
     bgTextColor: 'rgba(100,100,200,0.2)',
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     featured: false,
     href: '#',
     bgColor: 'linear-gradient(135deg, #1a0d0d 0%, #2a1010 100%)',
-    bgText: '03',
+    bgText: '04',
     bgTextColor: 'rgba(200,80,80,0.2)',
   },
   {
@@ -55,7 +55,7 @@ const projects = [
     featured: false,
     href: '#',
     bgColor: 'linear-gradient(135deg, #0d1a14 0%, #0a160e 100%)',
-    bgText: '04',
+    bgText: '05',
     bgTextColor: 'rgba(60,180,100,0.2)',
   },
 ]
