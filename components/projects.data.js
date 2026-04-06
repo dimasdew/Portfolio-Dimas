@@ -1,4 +1,4 @@
-// Edit this file to update your projects!
+// Edit this file to update projects.
 const projects = [
   {
   id: 1,
@@ -8,6 +8,7 @@ const projects = [
   featured: true,
   accent: true,
   href: 'https://portfolio-firee.vercel.app',
+  image: '/images/firee.png',
   bgColor: 'linear-gradient(135deg, #0d0d1f 0%, #131328 100%)',
   bgText: '02',
   bgTextColor: 'rgba(130,80,255,0.15)',
