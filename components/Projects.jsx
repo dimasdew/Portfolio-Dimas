@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import Link from 'next/link'
+import { useEffect, useRef } from 'react',
+import Link from 'next/link',
+import Image from 'next/image',
 import projects from './projects.data'
 
 function ProjectCard({ project, delay = 0 }) {
@@ -32,7 +33,14 @@ function ProjectCard({ project, delay = 0 }) {
       onMouseEnter={e => e.currentTarget.style.background = 'var(--bg3)'}
       onMouseLeave={e => e.currentTarget.style.background = 'var(--bg)'}
     >
-      {/* Image placeholder */}
+      {project.image ? (
+        <Image
+        src={project.image}
+        alt={project.name}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      ) : (
       <div
         className="w-full rounded-md overflow-hidden relative"
         style={{
