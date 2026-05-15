@@ -18,7 +18,7 @@ export default function Hero() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none font-display font-black whitespace-nowrap"
         style={{
           fontFamily: 'Syne, sans-serif',
-          fontSize: 'clamp(120px, 18vw, 260px)',
+          fontSize: 'clamp(80px, 14vw, 200px)',
           letterSpacing: '-0.04em',
           color: 'transparent',
           WebkitTextStroke: '1px rgba(255,255,255,0.04)',
@@ -40,11 +40,11 @@ export default function Hero() {
       {/* Title */}
       <h1
         ref={r1}
-        className="fade-up font-display font-black leading-none mb-8"
+        className="fade-up font-display font-black leading-tight mb-8"
         style={{
           fontFamily: 'Syne, sans-serif',
-          fontSize: 'clamp(3rem, 7vw, 6.5rem)',
-          letterSpacing: '-0.04em',
+          fontSize: 'clamp(2.2rem, 5vw, 4.5rem)',
+          letterSpacing: '-0.03em',
         }}
       >
         Crafting digital<br />

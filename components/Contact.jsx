@@ -24,11 +24,11 @@ export default function Contact() {
 
       <h2
         ref={r1}
-        className="fade-up font-display font-black leading-none mb-6"
+        className="fade-up font-display font-black leading-tight mb-6"
         style={{
           fontFamily: 'Syne, sans-serif',
-          fontSize: 'clamp(3rem, 7vw, 7rem)',
-          letterSpacing: '-0.05em',
+          fontSize: 'clamp(2.2rem, 5vw, 4.5rem)',
+          letterSpacing: '-0.03em',
         }}
       >
         Let's work<br />
