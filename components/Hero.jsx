@@ -1,22 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-
-function useFadeUp(delay = 0) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    el.style.transitionDelay = delay + 'ms'
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) el.classList.add('visible') },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [delay])
-  return ref
-}
+import useFadeUp from '../hooks/useFadeUp'
 
 export default function Hero() {
   const r0 = useFadeUp(0)
@@ -26,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-end px-12 pb-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 pb-16 md:pb-20 overflow-hidden"
     >
       {/* Decorative background text */}
       <div

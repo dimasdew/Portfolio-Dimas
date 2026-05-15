@@ -3,7 +3,7 @@
 export default function Footer() {
   return (
     <footer
-      className="flex flex-col md:flex-row justify-between items-center gap-4 px-12 py-8"
+      className="flex flex-col md:flex-row justify-between items-center gap-4 px-6 md:px-12 py-8"
       style={{ borderTop: '1px solid var(--border)' }}
     >
       <p className="text-xs" style={{ color: 'var(--muted)' }}>

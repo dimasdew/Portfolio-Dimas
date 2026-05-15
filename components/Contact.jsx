@@ -1,22 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-
-function useFadeUp(delay = 0) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    el.style.transitionDelay = delay + 'ms'
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) el.classList.add('visible') },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [delay])
-  return ref
-}
+import useFadeUp from '../hooks/useFadeUp'
 
 export default function Contact() {
   const r0 = useFadeUp(0)
@@ -25,7 +9,7 @@ export default function Contact() {
   const r3 = useFadeUp(240)
 
   return (
-    <section id="contact" className="relative py-28 px-12 text-center overflow-hidden">
+    <section id="contact" className="relative py-16 md:py-28 px-6 md:px-12 text-center overflow-hidden">
       {/* Glow */}
       <div
         className="absolute inset-0 pointer-events-none"

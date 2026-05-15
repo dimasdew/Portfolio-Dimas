@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
 
 :root {
   --bg: #0a0a0a;
@@ -23,11 +22,14 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
   font-size: 15px;
   line-height: 1.7;
   overflow-x: hidden;
-  cursor: none;
+}
+
+@media (pointer: fine) {
+  body { cursor: none; }
 }
 
 /* Scrollbar */
@@ -38,7 +40,7 @@ body {
 /* Selection */
 ::selection { background: var(--accent); color: #0a0a0a; }
 
-.font-display { font-family: 'Syne', sans-serif; }
+.font-display { font-family: var(--font-syne), 'Syne', sans-serif; }
 
 /* Fade-up animation */
 .fade-up {

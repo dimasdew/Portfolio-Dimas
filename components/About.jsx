@@ -1,28 +1,12 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import useFadeUp from '../hooks/useFadeUp'
 
 const skills = [
   'Figma', 'HTML & CSS', 'JavaScript', 'React',
   'Next.js', 'Tailwind CSS', 'Prototyping',
   'User Research', 'Responsive Design', 'Design Systems',
 ]
-
-function useFadeUp(delay = 0) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    el.style.transitionDelay = delay + 'ms'
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) el.classList.add('visible') },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [delay])
-  return ref
-}
 
 export default function About() {
   const r0 = useFadeUp(0)
@@ -32,7 +16,7 @@ export default function About() {
   const r4 = useFadeUp(240)
 
   return (
-    <section id="about" className="py-28 px-12">
+    <section id="about" className="py-16 md:py-28 px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
         {/* Photo placeholder */}
@@ -46,18 +30,29 @@ export default function About() {
             maxHeight: '520px',
           }}
         >
-          {/* Replace this div with <Image> from next/image when you have a photo */}
-          <span
-            className="font-display font-black"
-            style={{
-              fontFamily: 'Syne, sans-serif',
-              fontSize: '5rem',
-              color: 'var(--border-hover)',
-              letterSpacing: '-0.04em',
-            }}
+          <div
+            className="flex flex-col items-center justify-center gap-2"
           >
-            YOU
-          </span>
+            <span
+              className="font-display font-black"
+              style={{
+                fontFamily: 'Syne, sans-serif',
+                fontSize: '5rem',
+                letterSpacing: '-0.04em',
+                background: 'linear-gradient(135deg, var(--accent) 0%, #8BC34A 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              DD
+            </span>
+            <span
+              className="text-xs uppercase tracking-widest"
+              style={{ color: 'var(--muted)' }}
+            >
+              Dimas Dewantara
+            </span>
+          </div>
           <div
             className="absolute bottom-6 left-6 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full"
             style={{ background: 'var(--accent)', color: '#0a0a0a' }}

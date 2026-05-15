@@ -150,9 +150,9 @@ function ProjectCard({ project, delay = 0 }) {
 
 export default function Projects() {
   return (
-    <section id="work" className="py-28">
+    <section id="work" className="py-16 md:py-28">
       {/* Header */}
-      <div className="flex justify-between items-end mb-12 px-12">
+      <div className="flex justify-between items-end mb-12 px-6 md:px-12">
         <div>
           <p className="text-xs uppercase tracking-widest mb-2" style={{ color: 'var(--accent)' }}>
             Selected work
@@ -168,20 +168,11 @@ export default function Projects() {
             Projects
           </h2>
         </div>
-        
-         <a href="#"
-          className="text-sm flex items-center gap-2 transition-all duration-200"
-          style={{ color: 'var(--muted2)' }}
-          onMouseEnter={e => e.currentTarget.style.color = 'var(--text)'}
-          onMouseLeave={e => e.currentTarget.style.color = 'var(--muted2)'}
-        >
-          View all work →
-        </a>
       </div>
 
       {/* Grid */}
       <div
-        className="mx-12 grid grid-cols-1 md:grid-cols-2"
+        className="mx-6 md:mx-12 grid grid-cols-1 md:grid-cols-2"
         style={{ gap: '1.5px', background: 'var(--border)' }}
       >
         {projects.map((project, i) => (
