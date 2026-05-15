@@ -7,6 +7,7 @@ import projects from './projects.data'
 
 function ProjectCard({ project, delay = 0 }) {
   const ref = useRef(null)
+  const iframeContainerRef = useRef(null)
 
   useEffect(() => {
     const el = ref.current
@@ -19,6 +20,19 @@ function ProjectCard({ project, delay = 0 }) {
     observer.observe(el)
     return () => observer.disconnect()
   }, [delay])
+
+  useEffect(() => {
+    if (!project.liveUrl || !iframeContainerRef.current) return
+    const updateScale = () => {
+      const container = iframeContainerRef.current
+      if (!container) return
+      const scale = container.offsetWidth / 1440
+      container.style.setProperty('--iframe-scale', scale)
+    }
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [project.liveUrl])
 
   return (
     <Link
@@ -42,7 +56,23 @@ function ProjectCard({ project, delay = 0 }) {
           background: 'var(--bg3)',
         }}
       >
-        {project.image ? (
+        {project.liveUrl ? (
+          <div ref={iframeContainerRef} className="w-full h-full relative">
+            <iframe
+              src={project.liveUrl}
+              title={project.name}
+              className="absolute top-0 left-0 border-0 pointer-events-none"
+              style={{
+                width: '1440px',
+                height: '900px',
+                transform: 'scale(var(--iframe-scale, 0.5))',
+                transformOrigin: 'top left',
+              }}
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin"
+            />
+          </div>
+        ) : project.image ? (
           <Image
             src={project.image}
             alt={project.name}
