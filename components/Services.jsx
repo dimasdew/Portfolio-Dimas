@@ -1,0 +1,115 @@
+'use client'
+
+import useFadeUp from '../hooks/useFadeUp'
+
+const services = [
+  {
+    num: '01',
+    title: 'UI/UX Design',
+    desc: 'From wireframes to high-fidelity prototypes. I design intuitive, research-driven interfaces that users love to interact with.',
+    tools: ['Figma', 'Prototyping', 'User Research'],
+  },
+  {
+    num: '02',
+    title: 'Frontend Development',
+    desc: 'Pixel-perfect implementation of designs into fast, responsive, and accessible web applications using modern frameworks.',
+    tools: ['React', 'Next.js', 'Tailwind CSS'],
+  },
+  {
+    num: '03',
+    title: 'Web3 & Blockchain',
+    desc: 'Building decentralized interfaces and marketplace experiences that bridge Web3 technology with great user experience.',
+    tools: ['Web3', 'Smart Contracts', 'DApps'],
+  },
+]
+
+export default function Services() {
+  const r0 = useFadeUp(0)
+  const r1 = useFadeUp(60)
+
+  return (
+    <section className="py-20 md:py-36 px-6 md:px-12">
+      {/* Header */}
+      <div className="mb-16">
+        <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>
+          What I do
+        </p>
+        <h2
+          ref={r1}
+          className="fade-up font-display font-bold leading-tight"
+          style={{
+            fontFamily: 'Syne, sans-serif',
+            fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+            letterSpacing: '-0.03em',
+          }}
+        >
+          Services & expertise
+        </h2>
+      </div>
+
+      {/* Cards */}
+      <div
+        className="grid grid-cols-1 md:grid-cols-3 gap-px"
+        style={{ background: 'var(--border)' }}
+      >
+        {services.map((service, i) => (
+          <ServiceCard key={service.num} service={service} delay={i * 80} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function ServiceCard({ service, delay }) {
+  const ref = useFadeUp(delay)
+
+  return (
+    <div
+      ref={ref}
+      className="fade-up flex flex-col gap-5 p-8 md:p-10 transition-colors duration-300"
+      style={{ background: 'var(--bg)' }}
+      onMouseEnter={e => e.currentTarget.style.background = 'var(--bg3)'}
+      onMouseLeave={e => e.currentTarget.style.background = 'var(--bg)'}
+    >
+      <span
+        className="font-display font-bold text-4xl"
+        style={{
+          fontFamily: 'Syne, sans-serif',
+          color: 'var(--accent)',
+          opacity: 0.3,
+        }}
+      >
+        {service.num}
+      </span>
+
+      <h3
+        className="font-display font-bold text-xl"
+        style={{
+          fontFamily: 'Syne, sans-serif',
+          letterSpacing: '-0.02em',
+        }}
+      >
+        {service.title}
+      </h3>
+
+      <p className="text-sm leading-relaxed" style={{ color: 'var(--muted2)' }}>
+        {service.desc}
+      </p>
+
+      <div className="flex flex-wrap gap-2 mt-auto pt-4">
+        {service.tools.map(tool => (
+          <span
+            key={tool}
+            className="text-[10px] uppercase tracking-widest px-3 py-1 rounded-full"
+            style={{
+              color: 'var(--muted2)',
+              border: '1px solid var(--border)',
+            }}
+          >
+            {tool}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}

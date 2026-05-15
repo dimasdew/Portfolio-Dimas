@@ -34,19 +34,37 @@ function ProjectCard({ project, delay = 0 }) {
     return () => window.removeEventListener('resize', updateScale)
   }, [project.liveUrl])
 
+  const Wrapper = project.comingSoon ? 'div' : Link
+  const wrapperProps = project.comingSoon
+    ? {}
+    : { href: project.href }
+
   return (
-    <Link
+    <Wrapper
       ref={ref}
-      href={project.href}
-      className="fade-up group flex flex-col gap-5 p-10 no-underline relative overflow-hidden transition-colors duration-300"
+      {...wrapperProps}
+      className="fade-up group flex flex-col gap-5 p-6 md:p-10 no-underline relative overflow-hidden transition-colors duration-300"
       style={{
         background: 'var(--bg)',
         color: 'inherit',
         gridColumn: project.featured ? '1 / -1' : undefined,
+        cursor: project.comingSoon ? 'default' : undefined,
       }}
       onMouseEnter={e => e.currentTarget.style.background = 'var(--bg3)'}
-      onMouseLeave={e => e.currentTarget.style.background = 'var(--bg)'}
-    >
+      onMouseLeave={e => e.currentTarget.style.background = 'var(--bg)'}>
+      {/* Coming Soon overlay */}
+      {project.comingSoon && (
+        <div
+          className="absolute top-4 right-4 z-10 text-[10px] uppercase tracking-widest px-3 py-1 rounded-full"
+          style={{
+            color: 'var(--muted2)',
+            border: '1px solid var(--border)',
+            background: 'rgba(255,255,255,0.03)',
+          }}
+        >
+          Coming Soon
+        </div>
+      )}
       {/* Image area */}
       <div
         className="w-full rounded-md overflow-hidden relative"
@@ -144,13 +162,13 @@ function ProjectCard({ project, delay = 0 }) {
       <p className="text-sm leading-relaxed" style={{ color: 'var(--muted2)' }}>
         {project.desc}
       </p>
-    </Link>
+    </Wrapper>
   )
 }
 
 export default function Projects() {
   return (
-    <section id="work" className="py-16 md:py-28">
+    <section id="work" className="py-20 md:py-36">
       {/* Header */}
       <div className="flex justify-between items-end mb-12 px-6 md:px-12">
         <div>

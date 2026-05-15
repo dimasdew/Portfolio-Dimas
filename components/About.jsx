@@ -16,7 +16,7 @@ export default function About() {
   const r4 = useFadeUp(240)
 
   return (
-    <section id="about" className="py-16 md:py-28 px-6 md:px-12">
+    <section id="about" className="py-20 md:py-36 px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
         {/* Photo placeholder */}
