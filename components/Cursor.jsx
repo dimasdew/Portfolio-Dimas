@@ -17,29 +17,32 @@ export default function Cursor() {
       }
     }
 
-    const animate = () => {
+    const onEnter = () => ringRef.current?.classList.add('scale-150', 'border-[var(--accent)]')
+    const onLeave = () => ringRef.current?.classList.remove('scale-150', 'border-[var(--accent)]')
+
+    document.addEventListener('mousemove', onMove)
+    const links = document.querySelectorAll('a, button')
+    links.forEach(el => {
+      el.addEventListener('mouseenter', onEnter)
+      el.addEventListener('mouseleave', onLeave)
+    })
+
+    let rafId = requestAnimationFrame(function loop() {
       ring.current.x += (mouse.current.x - ring.current.x) * 0.14
       ring.current.y += (mouse.current.y - ring.current.y) * 0.14
       if (ringRef.current) {
         ringRef.current.style.left = ring.current.x + 'px'
         ringRef.current.style.top = ring.current.y + 'px'
       }
-      requestAnimationFrame(animate)
-    }
-
-    const onEnter = () => ringRef.current?.classList.add('scale-150', 'border-[var(--accent)]')
-    const onLeave = () => ringRef.current?.classList.remove('scale-150', 'border-[var(--accent)]')
-
-    document.addEventListener('mousemove', onMove)
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', onEnter)
-      el.addEventListener('mouseleave', onLeave)
+      rafId = requestAnimationFrame(loop)
     })
-
-    const rafId = requestAnimationFrame(animate)
     return () => {
       document.removeEventListener('mousemove', onMove)
       cancelAnimationFrame(rafId)
+      links.forEach(el => {
+        el.removeEventListener('mouseenter', onEnter)
+        el.removeEventListener('mouseleave', onLeave)
+      })
     }
   }, [])
 

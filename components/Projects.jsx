@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import projects from './projects.data'
 
 function ProjectCard({ project, delay = 0 }) {
@@ -140,12 +139,14 @@ function ProjectCard({ project, delay = 0 }) {
             </span>
           ))}
         </div>
-        <span
-          className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-          style={{ color: 'var(--muted)', opacity: 0.6 }}
-        >
-          ↗
-        </span>
+        {!project.comingSoon && (
+          <span
+            className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            style={{ color: 'var(--muted)', opacity: 0.6 }}
+          >
+            ↗
+          </span>
+        )}
       </div>
 
       {/* Name & desc */}
