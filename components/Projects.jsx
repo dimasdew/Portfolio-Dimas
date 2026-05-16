@@ -86,7 +86,6 @@ function ProjectCard({ project, delay = 0 }) {
                 transformOrigin: 'top left',
               }}
               loading="lazy"
-              sandbox="allow-scripts allow-same-origin"
             />
           </div>
         ) : project.image ? (
