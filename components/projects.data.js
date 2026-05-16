@@ -14,9 +14,9 @@ const projects = [
   },
   {
     id: 2,
-    name: 'Amana Protocol — DeFi Platform',
-    desc: 'A decentralized finance protocol interface with clean UI, featuring staking, lending, and governance built with Next.js and Tailwind CSS.',
-    tags: ['Next.js', 'DeFi', 'Web3'],
+    name: 'Amana Protocol — Decentralized Exchange',
+    desc: 'A decentralized exchange interface with clean UI, featuring token swaps, liquidity pools, and on-chain trading built with Next.js and Tailwind CSS.',
+    tags: ['Next.js', 'DEX', 'Web3'],
     featured: false,
     accent: false,
     href: 'https://amana-protocol.vercel.app/',
