@@ -3,9 +3,9 @@
 import useFadeUp from '../hooks/useFadeUp'
 
 const skills = [
-  'Figma', 'HTML & CSS', 'JavaScript', 'React',
-  'Next.js', 'Tailwind CSS', 'Prototyping',
-  'User Research', 'Responsive Design', 'Design Systems',
+  'Figma', 'HTML & CSS', 'JavaScript', 'TypeScript',
+  'React', 'Next.js', 'Tailwind CSS', 'Web3',
+  'Solana', 'Responsive Design', 'Prototyping', 'Design Systems',
 ]
 
 export default function About() {

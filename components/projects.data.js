@@ -36,18 +36,6 @@ const projects = [
     bgText: '03',
     bgTextColor: 'rgba(100,100,200,0.2)',
   },
-  {
-    id: 4,
-    name: 'Agency Landing Page',
-    desc: 'High-performance marketing site with scroll animations and micro-interactions, built for pixel-perfect precision.',
-    tags: ['Frontend', 'HTML/CSS', 'JS'],
-    featured: false,
-    href: '#',
-    comingSoon: true,
-    bgColor: 'linear-gradient(135deg, #1a0d0d 0%, #2a1010 100%)',
-    bgText: '04',
-    bgTextColor: 'rgba(200,80,80,0.2)',
-  },
 ]
 
 export default projects

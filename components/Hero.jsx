@@ -62,7 +62,7 @@ export default function Hero() {
 
         {/* Stats */}
         <div className="flex gap-12">
-          {[['5+', 'Projects done'], ['2+', 'Years exp.']].map(([num, label]) => (
+          {[['3+', 'Projects done'], ['2+', 'Years exp.']].map(([num, label]) => (
             <div key={label}>
               <div
                 className="font-display font-bold text-4xl leading-none"
