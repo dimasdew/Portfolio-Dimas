@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -26,7 +27,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-5 md:py-6 transition-all duration-300"
         style={{
           borderBottom: scrolled || menuOpen ? '1px solid var(--border)' : '1px solid transparent',
-          background: scrolled || menuOpen ? 'rgba(10,10,10,0.85)' : 'transparent',
+          background: scrolled || menuOpen ? 'var(--nav-bg)' : 'transparent',
           backdropFilter: scrolled || menuOpen ? 'blur(12px)' : 'none',
         }}
       >
@@ -48,6 +49,7 @@ export default function Navbar() {
               {item}
             </Link>
           ))}
+          <ThemeToggle />
           <a
             href="mailto:dimasdewantara50@gmail.com"
             className="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200"
@@ -94,7 +96,7 @@ export default function Navbar() {
       <div
         className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-400"
         style={{
-          background: 'rgba(10,10,10,0.97)',
+          background: 'var(--bg)',
           backdropFilter: 'blur(20px)',
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? 'auto' : 'none',
@@ -111,6 +113,7 @@ export default function Navbar() {
             {item}
           </Link>
         ))}
+        <ThemeToggle />
         <a
           href="mailto:dimasdewantara50@gmail.com"
           onClick={() => setMenuOpen(false)}

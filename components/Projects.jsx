@@ -1,8 +1,48 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import projects from './projects.data'
+
+function IframePreview({ project, iframeContainerRef }) {
+  const [loaded, setLoaded] = useState(false)
+
+  return (
+    <div ref={iframeContainerRef} className="w-full h-full relative">
+      {/* Skeleton shimmer */}
+      {!loaded && (
+        <div className="absolute inset-0 z-10 flex items-center justify-center animate-pulse">
+          <div className="absolute inset-0" style={{ background: 'var(--bg3)' }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              background: 'linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.04) 50%, transparent 75%)',
+              backgroundSize: '200% 100%',
+              animation: 'shimmer 1.5s infinite',
+            }}
+          />
+          <span className="relative text-xs uppercase tracking-widest" style={{ color: 'var(--muted)' }}>
+            Loading preview…
+          </span>
+        </div>
+      )}
+      <iframe
+        src={project.liveUrl}
+        title={project.name}
+        className="absolute top-0 left-0 border-0 pointer-events-none transition-opacity duration-500"
+        style={{
+          width: '1440px',
+          height: '900px',
+          transform: 'scale(var(--iframe-scale, 0.5))',
+          transformOrigin: 'top left',
+          opacity: loaded ? 1 : 0,
+        }}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+      />
+    </div>
+  )
+}
 
 function ProjectCard({ project, delay = 0 }) {
   const ref = useRef(null)
@@ -74,20 +114,10 @@ function ProjectCard({ project, delay = 0 }) {
         }}
       >
         {project.liveUrl ? (
-          <div ref={iframeContainerRef} className="w-full h-full relative">
-            <iframe
-              src={project.liveUrl}
-              title={project.name}
-              className="absolute top-0 left-0 border-0 pointer-events-none"
-              style={{
-                width: '1440px',
-                height: '900px',
-                transform: 'scale(var(--iframe-scale, 0.5))',
-                transformOrigin: 'top left',
-              }}
-              loading="lazy"
-            />
-          </div>
+          <IframePreview
+            project={project}
+            iframeContainerRef={iframeContainerRef}
+          />
         ) : project.image ? (
           <Image
             src={project.image}

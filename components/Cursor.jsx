@@ -56,7 +56,7 @@ export default function Cursor() {
       <div
         ref={ringRef}
         className="fixed w-9 h-9 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 transition-all duration-200"
-        style={{ border: '1px solid rgba(200,240,74,0.4)' }}
+        style={{ border: '1px solid var(--cursor-ring)' }}
       />
     </>
   )
