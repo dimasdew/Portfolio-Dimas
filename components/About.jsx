@@ -17,12 +17,12 @@ export default function About() {
 
   return (
     <section id="about" className="py-20 md:py-36 px-6 md:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
 
         {/* Photo placeholder */}
         <div
           ref={r0}
-          className="fade-up relative rounded-xl overflow-hidden flex items-center justify-center"
+          className="fade-up relative rounded-xl overflow-hidden flex items-center justify-center w-full"
           style={{
             aspectRatio: '3/4',
             background: 'var(--bg3)',
@@ -30,9 +30,7 @@ export default function About() {
             maxHeight: '520px',
           }}
         >
-          <div
-            className="flex flex-col items-center justify-center gap-2"
-          >
+          <div className="flex flex-col items-center justify-center gap-2">
             <span
               className="font-display font-black"
               style={{

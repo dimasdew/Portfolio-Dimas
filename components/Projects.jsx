@@ -8,7 +8,7 @@ function IframePreview({ project, iframeContainerRef }) {
   const [loaded, setLoaded] = useState(false)
 
   return (
-    <div ref={iframeContainerRef} className="w-full h-full relative">
+    <div ref={iframeContainerRef} className="w-full h-full relative hidden sm:block">
       {/* Skeleton shimmer */}
       {!loaded && (
         <div className="absolute inset-0 z-10 flex items-center justify-center animate-pulse">
@@ -114,10 +114,19 @@ function ProjectCard({ project, delay = 0 }) {
         }}
       >
         {project.liveUrl ? (
-          <IframePreview
-            project={project}
-            iframeContainerRef={iframeContainerRef}
-          />
+          <>
+            <IframePreview
+              project={project}
+              iframeContainerRef={iframeContainerRef}
+            />
+            {/* Mobile fallback — shown only when iframe hidden (<sm) */}
+            <div
+              className="sm:hidden w-full h-full flex items-center justify-center font-display font-black text-5xl tracking-tight"
+              style={{ fontFamily: 'Syne, sans-serif', color: project.bgTextColor || 'var(--muted)' }}
+            >
+              {project.bgText || project.name.split(' ')[0]}
+            </div>
+          </>
         ) : project.image ? (
           <Image
             src={project.image}

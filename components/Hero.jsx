@@ -61,7 +61,7 @@ export default function Hero() {
         </p>
 
         {/* Stats */}
-        <div className="flex gap-12">
+        <div className="flex gap-8 md:gap-12">
           {[['3+', 'Projects done'], ['2+', 'Years exp.']].map(([num, label]) => (
             <div key={label}>
               <div
