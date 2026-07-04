@@ -57,7 +57,7 @@ export default function Hero() {
         <p className="max-w-sm text-sm leading-relaxed" style={{ color: 'var(--muted2)' }}>
           UI/UX Designer & Frontend Developer based in Indonesia.
         <br />
-          I turn complex problems into clean, intuitive interfaces.
+          I design, build, and ship — from pixel to production.
         </p>
 
         {/* Stats */}

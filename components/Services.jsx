@@ -17,9 +17,15 @@ const services = [
   },
   {
     num: '03',
+    title: 'Fullstack (AI-Assisted)',
+    desc: 'End-to-end product development — frontend to backend — accelerated by an AI development agent. Ship production-ready apps without a full engineering team.',
+    tools: ['Node.js', 'PostgreSQL', 'Prisma', 'AI Agent'],
+  },
+  {
+    num: '04',
     title: 'Web3 & Blockchain',
     desc: 'Building decentralized interfaces and marketplace experiences that bridge Web3 technology with great user experience.',
-    tools: ['Web3', 'Smart Contracts', 'DApps'],
+    tools: ['Web3', 'Solana', 'DApps'],
   },
 ]
 
@@ -49,7 +55,7 @@ export default function Services() {
 
       {/* Cards */}
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-px"
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px"
         style={{ background: 'var(--border)' }}
       >
         {services.map((service, i) => (

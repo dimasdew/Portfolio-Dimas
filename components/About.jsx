@@ -4,8 +4,9 @@ import useFadeUp from '../hooks/useFadeUp'
 
 const skills = [
   'Figma', 'HTML & CSS', 'JavaScript', 'TypeScript',
-  'React', 'Next.js', 'Tailwind CSS', 'Web3',
-  'Solana', 'Responsive Design', 'Prototyping', 'Design Systems',
+  'React', 'Next.js', 'Tailwind CSS', 'Node.js',
+  'PostgreSQL', 'Prisma', 'Web3', 'Solana',
+  'Responsive Design', 'Prototyping', 'Design Systems', 'AI-Assisted Dev',
 ]
 
 export default function About() {
@@ -78,10 +79,10 @@ export default function About() {
             I design & build things people actually enjoy using.
           </h2>
           <p ref={r3} className="fade-up text-sm leading-relaxed mb-4" style={{ color: 'var(--muted2)' }}>
-            My name is Dimas Dewantara. I'm a self-taught UI/UX designer and frontend developer passionate about the intersection of great design and clean code. I believe beautiful interfaces should also be fast, accessible, and delightful to use.
+            My name is Dimas Dewantara. I'm a UI/UX designer and frontend developer who's made the leap to full-stack — designing in Figma, building in React/Next.js, and shipping backend systems with the help of an AI development agent. This lets me move fast without sacrificing craft.
           </p>
           <p className="text-sm leading-relaxed mb-8" style={{ color: 'var(--muted2)' }}>
-            Currently building my portfolio and looking for exciting opportunities to work with teams that care about craft. Always learning, always iterating.
+            Currently building Lumina and contributing to Zetra Wallet — a smart crypto wallet on Solana. Open to collaborations that care about design quality and clean execution.
           </p>
 
           {/* Skills */}

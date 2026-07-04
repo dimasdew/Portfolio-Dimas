@@ -1,6 +1,7 @@
 const skills = [
-  'UI/UX Design', 'Frontend Dev', 'Figma', 'React',
-  'Prototyping', 'Design Systems', 'Responsive Layout', 'User Research',
+  'UI/UX Design', 'Frontend Dev', 'Fullstack', 'Figma',
+  'React', 'Next.js', 'Node.js', 'Prototyping',
+  'Design Systems', 'AI-Assisted Dev', 'Solana', 'Web3',
 ]
 
 export default function Marquee() {
