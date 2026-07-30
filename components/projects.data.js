@@ -4,7 +4,7 @@ const projects = [
     id: 1,
     slug: 'firee',
     name: 'Firee, Decentralized Marketplace',
-    desc: 'End to end design and development of a decentralized marketplace for Web3 builders. Smart contract escrow, USDC payments on Base, instant delivery.',
+    desc: 'End to end design and development of a decentralized marketplace for physical goods. Smart contract escrow, USDC payments on Base, shipping and delivery confirmation on chain.',
     tags: ['Next.js', 'Tailwind CSS', 'Web3'],
     featured: true,
     accent: true,
@@ -15,42 +15,42 @@ const projects = [
     caseStudy: {
       role: 'Product Designer & Frontend Developer',
       timeline: 'Solo project, design to production',
-      stack: ['Next.js 14', 'Tailwind CSS', 'USDC on Base', 'Smart Contract Escrow'],
+      stack: ['Next.js 14', 'Tailwind CSS', 'Solidity', 'USDC on Base', 'Smart Contract Escrow', 'Supabase'],
       overview:
-        'Firee is a decentralized marketplace where Web3 builders buy and sell smart contracts, DApp templates, UI kits, and developer tools. Payments run in USDC on Base through smart contract escrow. No middlemen, a flat 3% fee, and instant file delivery.',
+        'Firee is a decentralized marketplace for physical goods. Buyers pay in USDC on Base, but the money never goes straight to the seller: it sits in a smart contract escrow until the item ships, arrives, and the buyer confirms delivery. A flat 3% fee, automatic refunds if the seller never ships, and every order state verifiable on chain.',
       problem:
-        'Digital marketplaces for developers like Gumroad and ThemeForest take 10 to 30 percent in fees, hold payouts for weeks, and lock sellers into Web2 payment rails. Crypto native builders had no trusted place to sell code artifacts where payment and delivery are both verifiable.',
+        'Buying physical goods from a stranger with crypto is a trust problem with no referee. Pay first and the seller can vanish; ship first and the buyer can. Marketplaces that tried this before, like OpenBazaar, solved the payment rail but died because the experience was built for crypto natives, not shoppers. The interesting problem was not the escrow contract. It was making an escrow state machine feel like a normal online store.',
       research: [
-        'Started from a simple question: what would a marketplace like Amazon look like if it ran on decentralized rails instead of Web2 payment systems?',
-        'Studied familiar Web2 marketplace flows, including browsing, checkout, and order tracking, and used them as the baseline so the product would feel familiar even to users new to crypto.',
-        'Mapped the escrow flow first, before any UI: payment locked, then files released via signed URL, then escrow settles. The UI had to make this state machine legible to non technical buyers.',
+        'Started from a simple question: what would Amazon look like if the trust layer were a smart contract instead of a corporation?',
+        'Studied why OpenBazaar failed despite proving demand: crypto native onboarding, no familiar checkout, and no clear answer to "what happens if my package never arrives."',
+        'Designed the escrow state machine before any screen: Paid, then Shipped with a tracking number, then Delivered on buyer confirmation, with timeout branches for refunds and disputes. Every screen after that is a projection of one state.',
       ],
       decisions: [
         {
-          title: 'Escrow status as the visual centerpiece',
+          title: 'The order timeline is the product',
           detail:
-            'Instead of hiding blockchain mechanics, each order shows a plain language escrow timeline: Paid, Locked, Delivered, Settled. Trust comes from visibility, not from hiding complexity.',
+            'Each order shows a plain language status: Awaiting Shipment, Shipped with tracking number, Delivered. The same state machine drives the buyer view, the seller view, and the contract. Trust comes from visibility, not from hiding blockchain mechanics.',
+        },
+        {
+          title: 'Deadlines instead of customer support',
+          detail:
+            'If the seller never ships within 14 days, the buyer claims a full refund directly from the contract. If the buyer goes silent after delivery, funds auto release to the seller after 30 days. Both failure modes resolve without a human in the loop, and the UI states the rules up front instead of burying them in terms.',
         },
         {
           title: 'Web2 onboarding, Web3 settlement',
           detail:
-            'Users sign up with email or Google first. Wallet connection is only required at the moment of buying or selling. This ordering removed the biggest drop off point, which is forcing wallet connect on landing.',
+            'Users sign up with email or Google and enter a normal shipping address at checkout. The wallet only appears at the moment of payment. This is the direct answer to why OpenBazaar style marketplaces lost mainstream buyers at the front door.',
         },
         {
-          title: 'Dark, minimal UI with a single accent',
+          title: 'Confirm Delivery as a deliberate action',
           detail:
-            'Marketplace listings are dense. A restrained dark palette with one accent color keeps product cards scannable and pushes visual weight to product thumbnails and prices, not chrome.',
-        },
-        {
-          title: 'Signed download URLs over public links',
-          detail:
-            'Product files live in private buckets, and only paying buyers receive time limited signed URLs. The UX challenge was communicating "your file is safe and only yours" without jargon, solved with a delivery receipt pattern.',
+            'Releasing payment is the highest stakes tap in the product, so it is an explicit button on the order, never automatic on a courier scan. The buyer decides when the deal is done, and the copy makes the consequence clear: confirming pays the seller.',
         },
       ],
       outcome:
-        'Shipped a full marketplace flow covering browse, buy, escrow, instant delivery, and a seller dashboard as a solo designer and developer. The result keeps the familiar feel of a Web2 marketplace while every payment and delivery step stays verifiable on chain.',
+        'Shipped the full physical goods flow as a solo designer and developer: checkout with shipping address, escrow payment, a seller order dashboard with Mark as Shipped and tracking input, buyer side delivery confirmation, and a Solidity escrow contract with timeout based refunds and auto release. It reads like a familiar Web2 store while every payment step stays verifiable on chain.',
       learnings:
-        'The best way to make Web3 approachable is to not reinvent what already works. Borrowing familiar Web2 marketplace patterns and swapping the trust layer to smart contract escrow kept the learning curve flat. I also learned to design the state machine before the screens. Every screen after that became an obvious projection of one state.',
+        'Firee started as a digital goods marketplace with instant file delivery. Pivoting to physical goods forced a rebuild of the trust model, because an escrow that settles on instant download makes no sense when delivery takes two weeks. The lesson: design the state machine first, and when the fulfillment model changes, expect the contract, the database, and the UI to change together. Screens are cheap; states are architecture.',
     },
   },
   {
