@@ -21,8 +21,8 @@ const projects = [
       problem:
         'Digital marketplaces for developers like Gumroad and ThemeForest take 10 to 30 percent in fees, hold payouts for weeks, and lock sellers into Web2 payment rails. Crypto native builders had no trusted place to sell code artifacts where payment and delivery are both verifiable.',
       research: [
-        'Benchmarked Gumroad, ThemeForest, and OpenSea flows to map where trust breaks: fee opacity, payout delays, and no proof of delivery.',
-        'Talked with Web3 builders in Telegram and Discord communities. The biggest objection to buying code from strangers was "how do I know I get the files after paying?"',
+        'Started from a simple question: what would a marketplace like Amazon look like if it ran on decentralized rails instead of Web2 payment systems?',
+        'Studied familiar Web2 marketplace flows, including browsing, checkout, and order tracking, and used them as the baseline so the product would feel familiar even to users new to crypto.',
         'Mapped the escrow flow first, before any UI: payment locked, then files released via signed URL, then escrow settles. The UI had to make this state machine legible to non technical buyers.',
       ],
       decisions: [
@@ -48,9 +48,9 @@ const projects = [
         },
       ],
       outcome:
-        'Shipped a full marketplace flow covering browse, buy, escrow, instant delivery, and a seller dashboard as a solo designer and developer. The escrow timeline pattern tested well with non crypto users: all five testers could correctly explain where their money was at each step.',
+        'Shipped a full marketplace flow covering browse, buy, escrow, instant delivery, and a seller dashboard as a solo designer and developer. The result keeps the familiar feel of a Web2 marketplace while every payment and delivery step stays verifiable on chain.',
       learnings:
-        'Trust UX in Web3 is a sequencing problem: ask for the wallet as late as possible, and show on chain state in human language. I also learned to design the state machine before the screens. Every screen after that became an obvious projection of one state.',
+        'The best way to make Web3 approachable is to not reinvent what already works. Borrowing familiar Web2 marketplace patterns and swapping the trust layer to smart contract escrow kept the learning curve flat. I also learned to design the state machine before the screens. Every screen after that became an obvious projection of one state.',
     },
   },
   {
