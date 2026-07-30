@@ -57,7 +57,7 @@ const projects = [
     id: 2,
     slug: 'amana-protocol',
     name: 'Amana Protocol, Decentralized Exchange',
-    desc: 'A full DeFi interface with token swaps, staking, lending with health factor monitoring, and concentrated liquidity. Built with Next.js, wagmi v2, and viem.',
+    desc: 'A DeFi exchange interface across nine modules with live Chainlink oracle pricing, risk first lending UX, and a single card grammar. Built with Next.js, wagmi v2, and viem.',
     tags: ['Next.js', 'DEX', 'Web3'],
     featured: false,
     accent: false,
@@ -70,7 +70,7 @@ const projects = [
       timeline: 'Solo project, design to production',
       stack: ['Next.js 14', 'wagmi v2', 'viem', 'RainbowKit', 'TanStack Query', 'Zustand', 'Recharts'],
       overview:
-        'Amana Protocol is a decentralized exchange interface covering four DeFi primitives in one product: smart routed swaps, flexible staking, lend and borrow with live health factor monitoring, and concentrated liquidity provision.',
+        'Amana Protocol is a decentralized exchange interface spanning nine modules: swap, stake, lend and borrow, concentrated liquidity, plus analytics, portfolio, and transaction history. Token prices are read live from Chainlink oracles on-chain via wagmi and viem. The trade and position flows are fully designed and interactive, priced against real oracle data, with the swap and lending logic simulated on the client rather than settled on-chain.',
       problem:
         'Most DEX interfaces are built for power users and feel like a Bloomberg terminal from 2015. Dense tables, unexplained numbers, and liquidation risk buried in tooltips. New DeFi users get liquidated because the UI never made risk visible.',
       research: [
@@ -82,12 +82,12 @@ const projects = [
         {
           title: 'Health Factor as a first class UI element',
           detail:
-            'The lending module surfaces health factor as a large, color coded indicator with plain language states like safe and at risk, not a decimal in a corner. Risk visibility drives the layout, not yield numbers.',
+            'The lending module surfaces health factor as a large, color coded indicator with plain language states like safe and at risk, not a decimal in a corner. It recomputes as the borrow amount changes so the risk consequence is visible before acting. Risk visibility drives the layout, not yield numbers.',
         },
         {
-          title: 'Preview before signature, always',
+          title: 'Preview before commit, always',
           detail:
-            'Every action, whether swap, stake, borrow, or LP, shows slippage, fees, and price impact before the wallet signature request. No transaction is ever a surprise, which is the core trust contract of the product.',
+            'Every action, whether swap, stake, borrow, or LP, shows slippage, fees, and price impact before the confirm step. No transaction is ever a surprise, which is the core trust contract of the product.',
         },
         {
           title: 'Four modules, one interaction grammar',
@@ -101,9 +101,9 @@ const projects = [
         },
       ],
       outcome:
-        'Shipped a production grade DeFi interface with full type safety through TypeScript and viem, plus wallet support via RainbowKit. The unified card grammar means the complete four module product ships with one design system and minimal bespoke UI.',
+        'Shipped a nine module DeFi interface with live Chainlink oracle reads through wagmi and viem, wallet support via RainbowKit, and full type safety in TypeScript. The unified card grammar means every module ships from one design system with minimal bespoke UI, which is what let a solo build cover this much surface area.',
       learnings:
-        'DeFi UX is risk communication design. The best performing pattern was the pre signature preview: users trust interfaces that commit to no surprises more than interfaces that promise high yields.',
+        'DeFi UX is risk communication design. The best performing pattern was the pre action preview: showing slippage, fees, and health factor before commitment. I also learned where to draw the line for a portfolio build, wiring real oracle pricing where it teaches the product, and simulating settlement where a full protocol deployment would not add to the design story.',
     },
   },
   {
