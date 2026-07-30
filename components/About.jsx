@@ -5,7 +5,7 @@ import useFadeUp from '../hooks/useFadeUp'
 const skills = [
   'Figma', 'HTML & CSS', 'JavaScript', 'TypeScript',
   'React', 'Next.js', 'Tailwind CSS', 'Web3',
-  'Solana', 'Responsive Design', 'Prototyping', 'Design Systems',
+  'Responsive Design', 'Prototyping', 'Design Systems',
 ]
 
 export default function About() {
@@ -76,10 +76,10 @@ export default function About() {
             I design & build things people actually enjoy using.
           </h2>
           <p ref={r3} className="fade-up text-sm leading-relaxed mb-4" style={{ color: 'var(--muted2)' }}>
-            I'm Dimas Dewantara — a UI/UX designer and frontend developer specializing in Web3 products. I design and build interfaces where trust is the core UX problem: marketplaces, DEXs, and security tooling. Every project I ship goes from research and wireframes to production code.
+            I'm Dimas Dewantara, a UI/UX designer and frontend developer specializing in Web3 products. I design and build interfaces where trust is the core UX problem: marketplaces, DEXs, and security tooling. Every project I ship goes from research and wireframes to production code.
           </p>
           <p className="text-sm leading-relaxed mb-8" style={{ color: 'var(--muted2)' }}>
-            I believe great interfaces should be fast, accessible, and honest — especially in crypto, where a confusing UI can cost users real money. Open to remote roles with teams that care about craft.
+            I believe great interfaces should be fast, accessible, and honest, especially in crypto where a confusing UI can cost users real money. Open to remote roles with teams that care about craft.
           </p>
 
           {/* Skills */}

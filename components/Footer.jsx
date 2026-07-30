@@ -7,7 +7,7 @@ export default function Footer() {
       style={{ borderTop: '1px solid var(--border)' }}
     >
       <p className="text-xs" style={{ color: 'var(--muted)' }}>
-        © 2026 — Designed & built with care.
+        © 2026 Dimas Dewantara. Designed & built with care.
       </p>
       <div className="flex gap-6">
         {[
