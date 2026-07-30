@@ -1,5 +1,6 @@
 import './globals.css'
 import { Syne, DM_Sans } from 'next/font/google'
+import Cursor from '../components/Cursor'
 
 const syne = Syne({
   subsets: ['latin'],
@@ -40,7 +41,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Cursor />
+        {children}
+      </body>
     </html>
   )
 }
