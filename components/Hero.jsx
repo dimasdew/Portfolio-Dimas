@@ -57,25 +57,8 @@ export default function Hero() {
         <p className="max-w-sm text-sm leading-relaxed" style={{ color: 'var(--muted2)' }}>
           UI/UX Designer & Frontend Developer based in Indonesia.
         <br />
-          I turn complex problems into clean, intuitive interfaces.
+          I design and ship Web3 products end-to-end — from research to production code.
         </p>
-
-        {/* Stats */}
-        <div className="flex gap-8 md:gap-12">
-          {[['3+', 'Projects done'], ['2+', 'Years exp.']].map(([num, label]) => (
-            <div key={label}>
-              <div
-                className="font-display font-bold text-4xl leading-none"
-                style={{ fontFamily: 'Syne, sans-serif', color: 'var(--text)' }}
-              >
-                {num.replace('+', '')}<span style={{ color: 'var(--accent)' }}>+</span>
-              </div>
-              <div className="text-xs uppercase tracking-wider mt-1" style={{ color: 'var(--muted)' }}>
-                {label}
-              </div>
-            </div>
-          ))}
-        </div>
 
         {/* Scroll indicator */}
         <div className="hidden md:flex flex-col items-center gap-2 text-xs uppercase tracking-widest" style={{ color: 'var(--muted)' }}>

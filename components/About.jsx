@@ -76,10 +76,10 @@ export default function About() {
             I design & build things people actually enjoy using.
           </h2>
           <p ref={r3} className="fade-up text-sm leading-relaxed mb-4" style={{ color: 'var(--muted2)' }}>
-            My name is Dimas Dewantara. I'm a self-taught UI/UX designer and frontend developer passionate about the intersection of great design and clean code. I believe beautiful interfaces should also be fast, accessible, and delightful to use.
+            I'm Dimas Dewantara — a UI/UX designer and frontend developer specializing in Web3 products. I design and build interfaces where trust is the core UX problem: marketplaces, DEXs, and security tooling. Every project I ship goes from research and wireframes to production code.
           </p>
           <p className="text-sm leading-relaxed mb-8" style={{ color: 'var(--muted2)' }}>
-            Currently building my portfolio and looking for exciting opportunities to work with teams that care about craft. Always learning, always iterating.
+            I believe great interfaces should be fast, accessible, and honest — especially in crypto, where a confusing UI can cost users real money. Open to remote roles with teams that care about craft.
           </p>
 
           {/* Skills */}
