@@ -19,7 +19,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  const navItems = ['Work', 'About', 'Contact']
+  const navItems = ['About', 'Work', 'Contact']
 
   return (
     <>
