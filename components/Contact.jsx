@@ -53,7 +53,7 @@ export default function Contact() {
             e.currentTarget.style.transform = 'scale(1)'
           }}
         >
-          Say hello ↗
+          Say hello
         </a>
         <a
           href="https://linkedin.com/in/dimas-soebrata-0b020a392/"

@@ -57,7 +57,7 @@ export default function Navbar() {
             onMouseEnter={e => e.currentTarget.style.background = 'var(--accent2)'}
             onMouseLeave={e => e.currentTarget.style.background = 'var(--accent)'}
           >
-            Hire me ↗
+            Hire me
           </a>
         </div>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
           className="text-sm font-semibold uppercase tracking-wider px-8 py-3 rounded-full mt-4 transition-all duration-200"
           style={{ background: 'var(--accent)', color: '#0a0a0a', textDecoration: 'none' }}
         >
-          Hire me ↗
+          Hire me
         </a>
       </div>
     </>

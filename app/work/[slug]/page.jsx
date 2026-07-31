@@ -11,7 +11,7 @@ export function generateMetadata({ params }) {
   const project = projects.find(p => p.slug === params.slug)
   if (!project) return {}
   return {
-    title: `${project.name} — Case Study | Dimas Dewantara`,
+    title: `${project.name} - Case Study | Dimas Dewantara`,
     description: project.desc,
   }
 }
@@ -87,7 +87,7 @@ export default function CaseStudyPage({ params }) {
                 className="text-sm no-underline"
                 style={{ color: 'var(--accent)' }}
               >
-                Visit site ↗
+                Visit site
               </a>
             </div>
           </div>
@@ -214,7 +214,7 @@ function NextProject({ currentSlug }) {
         className="font-display font-bold"
         style={{ fontFamily: 'Syne, sans-serif', fontSize: '1.4rem', letterSpacing: '-0.02em' }}
       >
-        {next.name} <span style={{ color: 'var(--accent)' }}>→</span>
+        {next.name}
       </p>
     </Link>
   )

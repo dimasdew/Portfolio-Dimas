@@ -179,10 +179,13 @@ function ProjectCard({ project, delay = 0 }) {
         </div>
         {!project.comingSoon && (
           <span
-            className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 inline-flex"
             style={{ color: 'var(--muted)', opacity: 0.6 }}
           >
-            ↗
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
           </span>
         )}
       </div>

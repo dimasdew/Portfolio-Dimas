@@ -3,7 +3,7 @@ const projects = [
   {
     id: 1,
     slug: 'firee',
-    name: 'Firee, Decentralized Marketplace',
+    name: 'Firee - Decentralized Marketplace',
     desc: 'End to end design and development of a decentralized marketplace for physical goods. Smart contract escrow, USDC payments on Base, shipping and delivery confirmation on chain.',
     tags: ['Next.js', 'Tailwind CSS', 'Web3'],
     featured: true,
@@ -14,7 +14,7 @@ const projects = [
     bgTextColor: 'rgba(130,80,255,0.15)',
     caseStudy: {
       role: 'Product Designer & Frontend Developer',
-      timeline: 'Solo project, design to production',
+      timeline: 'Solo project - design to production',
       stack: ['Next.js 14', 'Tailwind CSS', 'Solidity', 'USDC on Base', 'Smart Contract Escrow', 'Supabase'],
       overview:
         'Firee is a decentralized marketplace for physical goods. Buyers pay in USDC on Base, but the money never goes straight to the seller: it sits in a smart contract escrow until the item ships, arrives, and the buyer confirms delivery. A flat 3% fee, automatic refunds if the seller never ships, and every order state verifiable on chain.',
@@ -56,7 +56,7 @@ const projects = [
   {
     id: 2,
     slug: 'amana-protocol',
-    name: 'Amana Protocol, Decentralized Exchange',
+    name: 'Amana Protocol - Decentralized Exchange',
     desc: 'A DeFi exchange interface with real on chain lending on Base Sepolia, live Chainlink oracle pricing, risk first UX, and a single card grammar. Built with Next.js, wagmi v2, and viem.',
     tags: ['Next.js', 'DEX', 'Web3'],
     featured: false,
@@ -67,7 +67,7 @@ const projects = [
     bgTextColor: 'rgba(200,240,74,0.15)',
     caseStudy: {
       role: 'Product Designer & Frontend Developer',
-      timeline: 'Solo project, design to production',
+      timeline: 'Solo project - design to production',
       stack: ['Next.js 14', 'Solidity', 'Base Sepolia', 'wagmi v2', 'viem', 'RainbowKit', 'TanStack Query', 'Zustand', 'Recharts'],
       overview:
         'Amana Protocol is a decentralized exchange interface spanning seven screens: swap, stake, lend and borrow, concentrated liquidity, plus analytics, portfolio, and transaction history. Token prices are read live from Chainlink oracles on-chain via wagmi and viem. The lending module is real: supply, borrow, repay, and withdraw settle on a Solidity lending pool I deployed to Base Sepolia, with the health factor read straight from the contract. Swap, stake, and liquidity are fully designed and interactive but simulated on the client, and every module is labelled so the boundary is never ambiguous.',
@@ -109,7 +109,7 @@ const projects = [
   {
     id: 3,
     slug: 'risklens',
-    name: 'RiskLens, Token Risk Scanner',
+    name: 'RiskLens - Token Risk Scanner',
     desc: 'Automated token risk scanner for Solana and EVM chains. Turns raw on chain signals into plain language risk reports with score, warnings, and recommendations.',
     tags: ['Next.js', 'Web3', 'Security'],
     featured: false,
@@ -120,7 +120,7 @@ const projects = [
     bgTextColor: 'rgba(100,100,200,0.2)',
     caseStudy: {
       role: 'Product Designer & Frontend Developer',
-      timeline: 'Solo project, design to production',
+      timeline: 'Solo project - design to production',
       stack: ['Next.js', 'Solana and EVM data sources', 'USDC payments on Base'],
       overview:
         'RiskLens scans any token on Solana, Ethereum, Base, or BNB Chain and turns six or more raw on chain data sources into a plain language risk report: a score from 0 to 100, specific warnings, and what to do next. Free, no wallet connection, no sign up.',

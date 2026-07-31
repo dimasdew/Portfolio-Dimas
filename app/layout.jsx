@@ -17,11 +17,11 @@ const dmSans = DM_Sans({
 })
 
 export const metadata = {
-  title: 'Dimas Dewantara — UI/UX Designer & Frontend Developer',
+  title: 'Dimas Dewantara - UI/UX Designer & Frontend Developer',
   description: 'UI/UX Designer & Frontend Developer based in Indonesia. Crafting digital experiences that feel alive.',
   metadataBase: new URL('https://portfolio-dimasdew.vercel.app'),
   openGraph: {
-    title: 'Dimas Dewantara — Portfolio',
+    title: 'Dimas Dewantara - Portfolio',
     description: 'UI/UX Designer & Frontend Developer. Crafting digital experiences that feel alive.',
     url: 'https://portfolio-dimasdew.vercel.app',
     siteName: 'Dimas Dewantara Portfolio',
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dimas Dewantara — Portfolio',
+    title: 'Dimas Dewantara - Portfolio',
     description: 'UI/UX Designer & Frontend Developer. Crafting digital experiences that feel alive.',
   },
   icons: {
