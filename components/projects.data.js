@@ -57,7 +57,7 @@ const projects = [
     id: 2,
     slug: 'amana-protocol',
     name: 'Amana Protocol, Decentralized Exchange',
-    desc: 'A DeFi exchange interface across nine modules with live Chainlink oracle pricing, risk first lending UX, and a single card grammar. Built with Next.js, wagmi v2, and viem.',
+    desc: 'A DeFi exchange interface with real on chain lending on Base Sepolia, live Chainlink oracle pricing, risk first UX, and a single card grammar. Built with Next.js, wagmi v2, and viem.',
     tags: ['Next.js', 'DEX', 'Web3'],
     featured: false,
     accent: false,
@@ -68,9 +68,9 @@ const projects = [
     caseStudy: {
       role: 'Product Designer & Frontend Developer',
       timeline: 'Solo project, design to production',
-      stack: ['Next.js 14', 'wagmi v2', 'viem', 'RainbowKit', 'TanStack Query', 'Zustand', 'Recharts'],
+      stack: ['Next.js 14', 'Solidity', 'Base Sepolia', 'wagmi v2', 'viem', 'RainbowKit', 'TanStack Query', 'Zustand', 'Recharts'],
       overview:
-        'Amana Protocol is a decentralized exchange interface spanning nine modules: swap, stake, lend and borrow, concentrated liquidity, plus analytics, portfolio, and transaction history. Token prices are read live from Chainlink oracles on-chain via wagmi and viem. The trade and position flows are fully designed and interactive, priced against real oracle data, with the swap and lending logic simulated on the client rather than settled on-chain.',
+        'Amana Protocol is a decentralized exchange interface spanning seven screens: swap, stake, lend and borrow, concentrated liquidity, plus analytics, portfolio, and transaction history. Token prices are read live from Chainlink oracles on-chain via wagmi and viem. The lending module is real: supply, borrow, repay, and withdraw settle on a Solidity lending pool I deployed to Base Sepolia, with the health factor read straight from the contract. Swap, stake, and liquidity are fully designed and interactive but simulated on the client, and every module is labelled so the boundary is never ambiguous.',
       problem:
         'Most DEX interfaces are built for power users and feel like a Bloomberg terminal from 2015. Dense tables, unexplained numbers, and liquidation risk buried in tooltips. New DeFi users get liquidated because the UI never made risk visible.',
       research: [
@@ -101,9 +101,9 @@ const projects = [
         },
       ],
       outcome:
-        'Shipped a nine module DeFi interface with live Chainlink oracle reads through wagmi and viem, wallet support via RainbowKit, and full type safety in TypeScript. The unified card grammar means every module ships from one design system with minimal bespoke UI, which is what let a solo build cover this much surface area.',
+        'Shipped a seven screen DeFi interface with live Chainlink oracle reads through wagmi and viem, wallet support via RainbowKit, and full type safety in TypeScript. The lending module runs against a real Solidity pool I wrote and deployed to Base Sepolia, so supply, borrow, and health factor are genuine on chain reads and writes. The unified card grammar means every module ships from one design system with minimal bespoke UI, which is what let a solo build cover this much surface area.',
       learnings:
-        'DeFi UX is risk communication design. The best performing pattern was the pre action preview: showing slippage, fees, and health factor before commitment. I also learned where to draw the line for a portfolio build, wiring real oracle pricing where it teaches the product, and simulating settlement where a full protocol deployment would not add to the design story.',
+        'DeFi UX is risk communication design. The best performing pattern was the pre action preview: showing slippage, fees, and health factor before commitment. I also learned where to draw the line for a portfolio build, deploying a real lending pool where on chain state makes the risk UX honest, and simulating swap and liquidity where a full protocol deployment would not add to the design story. The rule I settled on: label every module so a reviewer always knows what is live and what is mocked.',
     },
   },
   {
