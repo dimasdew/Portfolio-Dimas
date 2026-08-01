@@ -9,7 +9,7 @@ export default function Contact() {
   const r3 = useFadeUp(240)
 
   return (
-    <section id="contact" className="relative pt-12 md:pt-24 pb-20 md:pb-36 px-6 md:px-12 text-center overflow-hidden">
+    <section id="contact" className="relative pt-12 md:pt-20 pb-20 md:pb-32 px-6 md:px-12 text-center overflow-hidden">
       {/* Glow */}
       <div
         className="absolute inset-0 pointer-events-none"

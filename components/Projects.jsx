@@ -209,7 +209,7 @@ function ProjectCard({ project, delay = 0 }) {
 
 export default function Projects() {
   return (
-    <section id="work" className="py-20 md:py-36">
+    <section id="work" className="py-20 md:py-32">
       {/* Header */}
       <div className="flex justify-between items-end mb-12 px-6 md:px-12">
         <div>

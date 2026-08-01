@@ -28,7 +28,7 @@ export default function Services() {
   const r1 = useFadeUp(60)
 
   return (
-    <section className="py-20 md:py-36 px-6 md:px-12">
+    <section className="py-20 md:py-32 px-6 md:px-12">
       {/* Header */}
       <div className="mb-16">
         <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>

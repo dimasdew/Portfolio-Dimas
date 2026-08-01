@@ -3,9 +3,9 @@
 export default function Footer() {
   return (
     <footer
-      className="flex flex-col md:flex-row justify-between items-center gap-4 px-6 md:px-12 py-8"
       style={{ borderTop: '1px solid var(--border)' }}
     >
+      <div className="page-container flex flex-col md:flex-row justify-between items-center gap-4 px-6 md:px-12 pt-12 pb-6">
       <p className="text-xs" style={{ color: 'var(--muted)' }}>
         © 2026 Dimas Dewantara. Designed & built with care.
       </p>
@@ -27,6 +27,7 @@ export default function Footer() {
             {label}
           </a>
         ))}
+      </div>
       </div>
     </footer>
   )

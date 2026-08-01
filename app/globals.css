@@ -45,9 +45,16 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Page frame — shared with the other projects. */
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (pointer: fine) {

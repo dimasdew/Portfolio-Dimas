@@ -24,13 +24,14 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-5 md:py-6 transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
           borderBottom: scrolled || menuOpen ? '1px solid var(--border)' : '1px solid transparent',
           background: scrolled || menuOpen ? 'var(--nav-bg)' : 'transparent',
           backdropFilter: scrolled || menuOpen ? 'blur(12px)' : 'none',
         }}
       >
+      <div className="page-container flex justify-between items-center h-16 px-6 md:px-12">
         <div className="font-display font-bold text-lg tracking-tight">
           DIMAS-DEW<span style={{ color: 'var(--accent)' }}>.</span>DEV
         </div>
@@ -90,6 +91,7 @@ export default function Navbar() {
             }}
           />
         </button>
+      </div>
       </nav>
 
       {/* Mobile menu overlay */}
