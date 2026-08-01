@@ -17,9 +17,9 @@ const services = [
   },
   {
     num: '03',
-    title: 'Web3 & Blockchain',
-    desc: 'Building decentralized interfaces and marketplace experiences that bridge Web3 technology with great user experience.',
-    tools: ['Web3', 'Smart Contracts', 'DApps'],
+    title: 'Web & Blockchain Products',
+    desc: 'From SaaS dashboards to decentralized apps, I build interfaces that make complex systems feel simple — with blockchain as a specialty.',
+    tools: ['Web', 'Web3', 'Smart Contracts', 'DApps'],
   },
 ]
 
