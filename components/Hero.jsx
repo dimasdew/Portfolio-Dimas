@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 pb-16 md:pb-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 pb-32 md:pb-44 overflow-hidden"
     >
       {/* Decorative background text */}
       <div
