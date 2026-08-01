@@ -53,7 +53,7 @@ export default function About() {
           </div>
           <div
             className="absolute bottom-6 left-6 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full"
-            style={{ background: 'var(--accent)', color: '#0a0a0a' }}
+            style={{ background: 'var(--accent)', color: 'var(--on-accent)' }}
           >
             Open to work
           </div>

@@ -53,7 +53,7 @@ export default function Navbar() {
           <a
             href="mailto:dimasdewantara50@gmail.com"
             className="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200"
-            style={{ background: 'var(--accent)', color: '#0a0a0a' }}
+            style={{ background: 'var(--accent)', color: 'var(--on-accent)' }}
             onMouseEnter={e => e.currentTarget.style.background = 'var(--accent2)'}
             onMouseLeave={e => e.currentTarget.style.background = 'var(--accent)'}
           >
@@ -118,7 +118,7 @@ export default function Navbar() {
           href="mailto:dimasdewantara50@gmail.com"
           onClick={() => setMenuOpen(false)}
           className="text-sm font-semibold uppercase tracking-wider px-8 py-3 rounded-full mt-4 transition-all duration-200"
-          style={{ background: 'var(--accent)', color: '#0a0a0a', textDecoration: 'none' }}
+          style={{ background: 'var(--accent)', color: 'var(--on-accent)', textDecoration: 'none' }}
         >
           Hire me
         </a>

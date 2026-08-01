@@ -43,7 +43,7 @@ export default function Contact() {
         <a
           href="mailto:dimasdewantara50@gmail.com"
           className="inline-flex items-center gap-2 font-semibold text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200"
-          style={{ background: 'var(--accent)', color: '#0a0a0a' }}
+          style={{ background: 'var(--accent)', color: 'var(--on-accent)' }}
           onMouseEnter={e => {
             e.currentTarget.style.background = 'var(--accent2)'
             e.currentTarget.style.transform = 'scale(0.97)'
