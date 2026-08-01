@@ -31,7 +31,7 @@ export default function Navbar() {
           backdropFilter: scrolled || menuOpen ? 'blur(12px)' : 'none',
         }}
       >
-        <div className="font-display font-bold text-lg tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
+        <div className="font-display font-bold text-lg tracking-tight">
           DIMAS-DEW<span style={{ color: 'var(--accent)' }}>.</span>DEV
         </div>
 
@@ -108,7 +108,7 @@ export default function Navbar() {
             href={`#${item.toLowerCase()}`}
             onClick={() => setMenuOpen(false)}
             className="font-display font-bold text-3xl tracking-tight transition-colors duration-200"
-            style={{ fontFamily: 'Syne, sans-serif', color: 'var(--text)', textDecoration: 'none' }}
+            style={{ color: 'var(--text)', textDecoration: 'none' }}
           >
             {item}
           </Link>

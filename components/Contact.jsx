@@ -18,18 +18,13 @@ export default function Contact() {
         }}
       />
 
-      <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-4" style={{ color: 'var(--accent)' }}>
+      <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>
         Get in touch
       </p>
 
       <h2
         ref={r1}
-        className="fade-up font-display font-black leading-tight mb-6"
-        style={{
-          fontFamily: 'Syne, sans-serif',
-          fontSize: 'clamp(2.2rem, 5vw, 4.5rem)',
-          letterSpacing: '-0.03em',
-        }}
+        className="fade-up font-display font-bold h-display mb-6"
       >
         Let's work<br />
         <em className="not-italic" style={{ color: 'var(--accent)' }}>together.</em>

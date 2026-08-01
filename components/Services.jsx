@@ -36,12 +36,7 @@ export default function Services() {
         </p>
         <h2
           ref={r1}
-          className="fade-up font-display font-bold leading-tight"
-          style={{
-            fontFamily: 'Syne, sans-serif',
-            fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-            letterSpacing: '-0.03em',
-          }}
+          className="fade-up font-display font-bold h-section"
         >
           Services & expertise
         </h2>
@@ -74,7 +69,6 @@ function ServiceCard({ service, delay }) {
       <span
         className="font-display font-bold text-4xl"
         style={{
-          fontFamily: 'Syne, sans-serif',
           color: 'var(--accent)',
           opacity: 0.3,
         }}
@@ -85,7 +79,6 @@ function ServiceCard({ service, delay }) {
       <h3
         className="font-display font-bold text-lg"
         style={{
-          fontFamily: 'Syne, sans-serif',
           letterSpacing: '-0.02em',
         }}
       >

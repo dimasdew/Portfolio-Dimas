@@ -18,7 +18,7 @@ export function generateMetadata({ params }) {
 
 function SectionLabel({ children }) {
   return (
-    <p className="text-xs uppercase tracking-widest mb-4" style={{ color: 'var(--accent)' }}>
+    <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>
       {children}
     </p>
   )
@@ -55,12 +55,7 @@ export default function CaseStudyPage({ params }) {
             ))}
           </div>
           <h1
-            className="font-display font-black leading-tight mb-6"
-            style={{
-              fontFamily: 'Syne, sans-serif',
-              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-              letterSpacing: '-0.03em',
-            }}
+            className="font-display font-black h-section mb-6"
           >
             {project.name}
           </h1>
@@ -123,7 +118,7 @@ export default function CaseStudyPage({ params }) {
               <li key={i} className="flex gap-4 text-base leading-relaxed" style={{ color: 'var(--muted2)' }}>
                 <span
                   className="font-display font-bold shrink-0"
-                  style={{ fontFamily: 'Syne, sans-serif', color: 'var(--accent)' }}
+                  style={{ color: 'var(--accent)' }}
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -144,8 +139,8 @@ export default function CaseStudyPage({ params }) {
                 style={{ background: 'var(--bg3)', border: '1px solid var(--border)' }}
               >
                 <h3
-                  className="font-display font-bold mb-3 leading-snug"
-                  style={{ fontFamily: 'Syne, sans-serif', fontSize: '1.05rem', letterSpacing: '-0.02em' }}
+                  className="font-display font-bold text-lg mb-3 leading-snug"
+                  style={{ letterSpacing: '-0.02em' }}
                 >
                   {d.title}
                 </h3>
@@ -211,8 +206,8 @@ function NextProject({ currentSlug }) {
         Next case study
       </p>
       <p
-        className="font-display font-bold"
-        style={{ fontFamily: 'Syne, sans-serif', fontSize: '1.4rem', letterSpacing: '-0.02em' }}
+        className="font-display font-bold text-xl"
+        style={{ letterSpacing: '-0.02em' }}
       >
         {next.name}
       </p>

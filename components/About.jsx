@@ -34,10 +34,9 @@ export default function About() {
             <span
               className="font-display font-black"
               style={{
-                fontFamily: 'Syne, sans-serif',
                 fontSize: '5rem',
                 letterSpacing: '-0.04em',
-                background: 'linear-gradient(135deg, var(--accent) 0%, #8BC34A 100%)',
+                background: 'linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
@@ -66,12 +65,7 @@ export default function About() {
           </p>
           <h2
             ref={r2}
-            className="fade-up font-display font-bold leading-tight mb-6"
-            style={{
-              fontFamily: 'Syne, sans-serif',
-              fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)',
-              letterSpacing: '-0.03em',
-            }}
+            className="fade-up font-display font-bold h-section mb-6"
           >
             I design & build things people actually enjoy using.
           </h2>
@@ -95,7 +89,7 @@ export default function About() {
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.borderColor = 'var(--border-hover)'
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.05)'
+                  e.currentTarget.style.background = 'var(--bg2)'
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.borderColor = 'var(--border)'

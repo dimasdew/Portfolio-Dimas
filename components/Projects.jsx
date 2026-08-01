@@ -17,7 +17,7 @@ function IframePreview({ project, iframeContainerRef }) {
           <div
             className="absolute inset-0 opacity-30"
             style={{
-              background: 'linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.04) 50%, transparent 75%)',
+              background: 'linear-gradient(90deg, transparent 25%, var(--hairline) 50%, transparent 75%)',
               backgroundSize: '200% 100%',
               animation: 'shimmer 1.5s infinite',
             }}
@@ -99,7 +99,7 @@ function ProjectCard({ project, delay = 0 }) {
           style={{
             color: 'var(--muted2)',
             border: '1px solid var(--border)',
-            background: 'rgba(255,255,255,0.03)',
+            background: 'var(--bg3)',
           }}
         >
           Coming Soon
@@ -123,7 +123,7 @@ function ProjectCard({ project, delay = 0 }) {
             {/* Mobile fallback — shown only when iframe hidden (<sm) */}
             <div
               className="sm:hidden w-full h-full flex items-center justify-center font-display font-black text-5xl tracking-tight"
-              style={{ fontFamily: 'Syne, sans-serif', color: project.bgTextColor || 'var(--muted)' }}
+              style={{ color: project.bgTextColor || 'var(--muted)' }}
             >
               {project.bgText || project.name.split(' ')[0]}
             </div>
@@ -139,7 +139,6 @@ function ProjectCard({ project, delay = 0 }) {
           <div
             className="w-full h-full flex items-center justify-center font-display font-black text-5xl tracking-tight transition-transform duration-500 group-hover:scale-105"
             style={{
-              fontFamily: 'Syne, sans-serif',
               background: project.bgColor,
               color: project.bgTextColor,
             }}
@@ -195,7 +194,6 @@ function ProjectCard({ project, delay = 0 }) {
       <h3
         className="font-display font-bold leading-tight"
         style={{
-          fontFamily: 'Syne, sans-serif',
           fontSize: project.featured ? '1.75rem' : '1.3rem',
           letterSpacing: '-0.02em',
         }}
@@ -215,16 +213,11 @@ export default function Projects() {
       {/* Header */}
       <div className="flex justify-between items-end mb-12 px-6 md:px-12">
         <div>
-          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: 'var(--accent)' }}>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>
             Selected work
           </p>
           <h2
-            className="font-display font-bold leading-none"
-            style={{
-              fontFamily: 'Syne, sans-serif',
-              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-              letterSpacing: '-0.03em',
-            }}
+            className="font-display font-bold h-section"
           >
             Projects
           </h2>
