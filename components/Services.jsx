@@ -83,7 +83,7 @@ function ServiceCard({ service, delay }) {
       </span>
 
       <h3
-        className="font-display font-bold text-xl"
+        className="font-display font-bold text-lg"
         style={{
           fontFamily: 'Syne, sans-serif',
           letterSpacing: '-0.02em',

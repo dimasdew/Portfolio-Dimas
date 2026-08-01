@@ -94,7 +94,7 @@ export default function Navbar() {
 
       {/* Mobile menu overlay */}
       <div
-        className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-400"
+        className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-slow"
         style={{
           background: 'var(--bg)',
           backdropFilter: 'blur(20px)',
