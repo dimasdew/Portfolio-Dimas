@@ -56,7 +56,7 @@ export default function Contact() {
           Say hello
         </a>
         <a
-          href="https://linkedin.com/in/dimas-soebrata-0b020a392/"
+          href="https://www.linkedin.com/in/dimas-dew/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 font-medium text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200"

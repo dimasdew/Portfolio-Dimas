@@ -29,7 +29,7 @@ I'm currently building my portfolio and open to work projects and collaboration 
 ## 📬 Contact
 
 - Email: [dimasdewantara50@gmail.com](mailto:dimasdewantara50@gmail.com)
-- LinkedIn: [linkedin.com/in/dimas-soebrata-0b020a392/](https://linkedin.com/in/dimas-soebrata-0b020a392/)
+- LinkedIn: [linkedin.com/in/dimas-dew/](https://www.linkedin.com/in/dimas-dew/)
 
 ---
 
