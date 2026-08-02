@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import projects from '../../../components/projects.data'
 import Footer from '../../../components/Footer'
+import Chip from '@/components/ui/Chip'
 
 export function generateStaticParams() {
   return projects.filter(p => p.caseStudy).map(p => ({ slug: p.slug }))
@@ -45,13 +46,7 @@ export default function CaseStudyPage({ params }) {
         <header className="mt-12 mb-16">
           <div className="flex gap-2 flex-wrap mb-6">
             {project.tags.map(tag => (
-              <span
-                key={tag}
-                className="text-[10px] uppercase tracking-widest px-3 py-1 rounded-full"
-                style={{ color: 'var(--muted2)', border: '1px solid var(--border)', background: 'var(--bg3)' }}
-              >
-                {tag}
-              </span>
+              <Chip key={tag} tone="filled">{tag}</Chip>
             ))}
           </div>
           <h1

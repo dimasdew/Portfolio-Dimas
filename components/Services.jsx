@@ -1,6 +1,7 @@
 'use client'
 
 import useFadeUp from '../hooks/useFadeUp'
+import Chip from '@/components/ui/Chip'
 
 const services = [
   {
@@ -91,16 +92,7 @@ function ServiceCard({ service, delay }) {
 
       <div className="flex flex-wrap gap-2 mt-auto pt-4">
         {service.tools.map(tool => (
-          <span
-            key={tool}
-            className="text-[10px] uppercase tracking-widest px-3 py-1 rounded-full"
-            style={{
-              color: 'var(--muted2)',
-              border: '1px solid var(--border)',
-            }}
-          >
-            {tool}
-          </span>
+          <Chip key={tool}>{tool}</Chip>
         ))}
       </div>
     </div>

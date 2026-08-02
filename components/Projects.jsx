@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import projects from './projects.data'
+import Chip from '@/components/ui/Chip'
 
 function IframePreview({ project, iframeContainerRef }) {
   const [loaded, setLoaded] = useState(false)
@@ -152,29 +153,10 @@ function ProjectCard({ project, delay = 0 }) {
       <div className="flex justify-between items-center">
         <div className="flex gap-2 flex-wrap">
           {project.accent && (
-            <span
-              className="text-[10px] uppercase tracking-widest px-3 py-1 rounded-full"
-              style={{
-                color: 'var(--accent)',
-                border: '1px solid rgba(200,240,74,0.25)',
-                background: 'rgba(200,240,74,0.05)',
-              }}
-            >
-              Featured
-            </span>
+            <Chip tone="accent">Featured</Chip>
           )}
           {project.tags.map(tag => (
-            <span
-              key={tag}
-              className="text-[10px] uppercase tracking-widest px-3 py-1 rounded-full transition-all duration-200"
-              style={{
-                color: 'var(--muted2)',
-                border: '1px solid var(--border)',
-                background: 'var(--bg3)',
-              }}
-            >
-              {tag}
-            </span>
+            <Chip key={tag} tone="filled" className="transition-all duration-200">{tag}</Chip>
           ))}
         </div>
         {!project.comingSoon && (
