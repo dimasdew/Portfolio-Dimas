@@ -50,8 +50,8 @@ export default function Cursor() {
     <>
       <div
         ref={cursorRef}
-        className="fixed w-2 h-2 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
-        style={{ background: 'var(--accent)', transition: 'transform 0.1s' }}
+        className="fixed w-2 h-2 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 bg-accent"
+        style={{ transition: 'transform 0.1s' }}
       />
       <div
         ref={ringRef}

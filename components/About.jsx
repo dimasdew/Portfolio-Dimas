@@ -22,10 +22,9 @@ export default function About() {
         {/* Photo placeholder */}
         <div
           ref={r0}
-          className="fade-up relative rounded-xl overflow-hidden flex items-center justify-center w-full"
+          className="fade-up relative rounded-xl overflow-hidden flex items-center justify-center w-full bg-bg3"
           style={{
             aspectRatio: '3/4',
-            background: 'var(--bg3)',
             border: '1px solid var(--border)',
             maxHeight: '520px',
           }}
@@ -44,15 +43,13 @@ export default function About() {
               DD
             </span>
             <span
-              className="text-xs uppercase tracking-widest"
-              style={{ color: 'var(--muted)' }}
+              className="text-xs uppercase tracking-widest text-muted"
             >
               Dimas Dewantara
             </span>
           </div>
           <div
-            className="absolute bottom-6 left-6 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full"
-            style={{ background: 'var(--accent)', color: 'var(--on-accent)' }}
+            className="absolute bottom-6 left-6 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full bg-accent text-on-accent"
           >
             Open to work
           </div>
@@ -60,7 +57,7 @@ export default function About() {
 
         {/* Content */}
         <div>
-          <p ref={r1} className="fade-up text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>
+          <p ref={r1} className="fade-up text-xs uppercase tracking-widest mb-3 text-accent">
             About me
           </p>
           <h2
@@ -69,10 +66,10 @@ export default function About() {
           >
             I design & build things people actually enjoy using.
           </h2>
-          <p ref={r3} className="fade-up text-sm leading-relaxed mb-4" style={{ color: 'var(--muted2)' }}>
+          <p ref={r3} className="fade-up text-sm leading-relaxed mb-4 text-muted2">
             I'm Dimas Dewantara, a UI/UX designer and frontend developer specializing in web apps built with AI agents. I design and build interfaces where trust is the core UX problem: marketplaces, DEXs, SaaS dashboards, and security tooling. Every project I ship goes from research and wireframes to production code.
           </p>
-          <p className="text-sm leading-relaxed mb-8" style={{ color: 'var(--muted2)' }}>
+          <p className="text-sm leading-relaxed mb-8 text-muted2">
             I believe great interfaces should be fast, accessible, and honest, especially where a confusing UI can cost users real money and time. Open to roles with teams that care about craft.
           </p>
 
@@ -81,11 +78,9 @@ export default function About() {
             {skills.map(skill => (
               <span
                 key={skill}
-                className="text-xs px-4 py-2 rounded-full transition-all duration-200"
+                className="text-xs px-4 py-2 rounded-full transition-all duration-200 bg-bg3 text-text"
                 style={{
-                  background: 'var(--bg3)',
                   border: '1px solid var(--border)',
-                  color: 'var(--text)',
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.borderColor = 'var(--border-hover)'

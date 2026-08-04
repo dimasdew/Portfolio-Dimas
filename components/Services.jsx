@@ -32,7 +32,7 @@ export default function Services() {
     <section className="py-20 md:py-32 px-6 md:px-12">
       {/* Header */}
       <div className="mb-16">
-        <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>
+        <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-3 text-accent">
           What I do
         </p>
         <h2
@@ -45,8 +45,7 @@ export default function Services() {
 
       {/* Cards */}
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px"
-        style={{ background: 'var(--border)' }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)]"
       >
         {services.map((service, i) => (
           <ServiceCard key={service.num} service={service} delay={i * 80} />
@@ -62,15 +61,13 @@ function ServiceCard({ service, delay }) {
   return (
     <div
       ref={ref}
-      className="fade-up flex flex-col gap-5 p-8 md:p-10 transition-colors duration-300"
-      style={{ background: 'var(--bg)' }}
+      className="fade-up flex flex-col gap-5 p-8 md:p-10 transition-colors duration-300 bg-bg"
       onMouseEnter={e => e.currentTarget.style.background = 'var(--bg3)'}
       onMouseLeave={e => e.currentTarget.style.background = 'var(--bg)'}
     >
       <span
-        className="font-display font-bold text-4xl"
+        className="font-display font-bold text-4xl text-accent"
         style={{
-          color: 'var(--accent)',
           opacity: 0.3,
         }}
       >
@@ -86,7 +83,7 @@ function ServiceCard({ service, delay }) {
         {service.title}
       </h3>
 
-      <p className="text-sm leading-relaxed" style={{ color: 'var(--muted2)' }}>
+      <p className="text-sm leading-relaxed text-muted2">
         {service.desc}
       </p>
 

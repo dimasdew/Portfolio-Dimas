@@ -33,7 +33,7 @@ export default function Navbar() {
       >
       <div className="page-container flex justify-between items-center h-16 px-6 md:px-12">
         <div className="font-display font-bold text-lg tracking-tight">
-          DIMAS-DEW<span style={{ color: 'var(--accent)' }}>.</span>DEV
+          DIMAS-DEW<span className="text-accent">.</span>DEV
         </div>
 
         {/* Desktop nav */}
@@ -42,8 +42,7 @@ export default function Navbar() {
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-xs uppercase tracking-widest transition-colors duration-200"
-              style={{ color: 'var(--muted2)' }}
+              className="text-xs uppercase tracking-widest transition-colors duration-200 text-muted2"
               onMouseEnter={e => e.target.style.color = 'var(--text)'}
               onMouseLeave={e => e.target.style.color = 'var(--muted2)'}
             >
@@ -53,8 +52,7 @@ export default function Navbar() {
           <ThemeToggle />
           <a
             href="mailto:dimasdewantara50@gmail.com"
-            className="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200"
-            style={{ background: 'var(--accent)', color: 'var(--on-accent)' }}
+            className="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full transition-all duration-200 bg-accent text-on-accent"
             onMouseEnter={e => e.currentTarget.style.background = 'var(--accent2)'}
             onMouseLeave={e => e.currentTarget.style.background = 'var(--accent)'}
           >
@@ -70,23 +68,20 @@ export default function Navbar() {
           style={{ cursor: 'pointer', background: 'none', border: 'none' }}
         >
           <span
-            className="block w-5 h-[1.5px] transition-all duration-300 origin-center"
+            className="block w-5 h-[1.5px] transition-all duration-300 origin-center bg-text"
             style={{
-              background: 'var(--text)',
               transform: menuOpen ? 'rotate(45deg) translate(2.3px, 2.3px)' : 'none',
             }}
           />
           <span
-            className="block w-5 h-[1.5px] transition-all duration-300"
+            className="block w-5 h-[1.5px] transition-all duration-300 bg-text"
             style={{
-              background: 'var(--text)',
               opacity: menuOpen ? 0 : 1,
             }}
           />
           <span
-            className="block w-5 h-[1.5px] transition-all duration-300 origin-center"
+            className="block w-5 h-[1.5px] transition-all duration-300 origin-center bg-text"
             style={{
-              background: 'var(--text)',
               transform: menuOpen ? 'rotate(-45deg) translate(2.3px, -2.3px)' : 'none',
             }}
           />
@@ -96,9 +91,8 @@ export default function Navbar() {
 
       {/* Mobile menu overlay */}
       <div
-        className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-slow"
+        className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-slow bg-bg"
         style={{
-          background: 'var(--bg)',
           backdropFilter: 'blur(20px)',
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? 'auto' : 'none',
@@ -109,8 +103,8 @@ export default function Navbar() {
             key={item}
             href={`#${item.toLowerCase()}`}
             onClick={() => setMenuOpen(false)}
-            className="font-display font-bold text-3xl tracking-tight transition-colors duration-200"
-            style={{ color: 'var(--text)', textDecoration: 'none' }}
+            className="font-display font-bold text-3xl tracking-tight transition-colors duration-200 text-text"
+            style={{ textDecoration: 'none' }}
           >
             {item}
           </Link>
@@ -119,8 +113,8 @@ export default function Navbar() {
         <a
           href="mailto:dimasdewantara50@gmail.com"
           onClick={() => setMenuOpen(false)}
-          className="text-sm font-semibold uppercase tracking-wider px-8 py-3 rounded-full mt-4 transition-all duration-200"
-          style={{ background: 'var(--accent)', color: 'var(--on-accent)', textDecoration: 'none' }}
+          className="text-sm font-semibold uppercase tracking-wider px-8 py-3 rounded-full mt-4 transition-all duration-200 bg-accent text-on-accent"
+          style={{ textDecoration: 'none' }}
         >
           Hire me
         </a>

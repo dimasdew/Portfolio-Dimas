@@ -18,7 +18,7 @@ export default function Contact() {
         }}
       />
 
-      <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--accent)' }}>
+      <p ref={r0} className="fade-up text-xs uppercase tracking-widest mb-3 text-accent">
         Get in touch
       </p>
 
@@ -27,18 +27,17 @@ export default function Contact() {
         className="fade-up font-display font-bold h-display mb-6"
       >
         Let's work<br />
-        <em className="not-italic" style={{ color: 'var(--accent)' }}>together.</em>
+        <em className="not-italic text-accent">together.</em>
       </h2>
 
-      <p ref={r2} className="fade-up text-sm max-w-md mx-auto mb-10" style={{ color: 'var(--muted2)' }}>
+      <p ref={r2} className="fade-up text-sm max-w-md mx-auto mb-10 text-muted2">
         Have a project in mind or just want to chat? I'm always open to new opportunities and interesting collaborations.
       </p>
 
       <div ref={r3} className="fade-up flex gap-4 justify-center flex-wrap">
         <a
           href="mailto:dimasdewantara50@gmail.com"
-          className="inline-flex items-center gap-2 font-semibold text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200"
-          style={{ background: 'var(--accent)', color: 'var(--on-accent)' }}
+          className="inline-flex items-center gap-2 font-semibold text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200 bg-accent text-on-accent"
           onMouseEnter={e => {
             e.currentTarget.style.background = 'var(--accent2)'
             e.currentTarget.style.transform = 'scale(0.97)'
@@ -54,10 +53,9 @@ export default function Contact() {
           href="https://www.linkedin.com/in/dimas-dew/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 font-medium text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200"
+          className="inline-flex items-center gap-2 font-medium text-sm tracking-wider px-8 py-4 rounded-full transition-all duration-200 text-text"
           style={{
             background: 'transparent',
-            color: 'var(--text)',
             border: '1px solid var(--border)',
           }}
           onMouseEnter={e => {

@@ -29,10 +29,9 @@ export default function Hero() {
       {/* Tag */}
       <div
         ref={r0}
-        className="fade-up flex items-center gap-3 text-xs uppercase tracking-widest mb-3"
-        style={{ color: 'var(--accent)' }}
+        className="fade-up flex items-center gap-3 text-xs uppercase tracking-widest mb-3 text-accent"
       >
-        <span className="block w-8 h-px" style={{ background: 'var(--accent)' }} />
+        <span className="block w-8 h-px bg-accent" />
         Available for work
       </div>
 
@@ -42,20 +41,20 @@ export default function Hero() {
         className="fade-up font-display font-black h-display mb-8"
       >
         Crafting digital<br />
-        <em className="not-italic" style={{ color: 'var(--accent)' }}>experiences</em> that<br />
+        <em className="not-italic text-accent">experiences</em> that<br />
         feel alive.
       </h1>
 
       {/* Bottom row */}
       <div ref={r2} className="fade-up flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-        <p className="max-w-xl text-sm leading-relaxed" style={{ color: 'var(--muted2)' }}>
+        <p className="max-w-xl text-sm leading-relaxed text-muted2">
           UI/UX Designer & Frontend Developer based in Indonesia.
         <br />
           I design and ship digital products end to end, from research to production code.
         </p>
 
         {/* Scroll indicator */}
-        <div className="hidden md:flex flex-col items-center gap-2 text-xs uppercase tracking-widest" style={{ color: 'var(--muted)' }}>
+        <div className="hidden md:flex flex-col items-center gap-2 text-xs uppercase tracking-widest text-muted">
           <div className="scroll-line w-px h-16" style={{ background: 'linear-gradient(to bottom, var(--accent), transparent)' }} />
           scroll
         </div>
