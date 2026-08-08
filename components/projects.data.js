@@ -159,6 +159,59 @@ const projects = [
         'The hardest design work was editorial, not visual: compressing security analysis into sentences a non technical trader acts on. Writing is interface design in security tooling.',
     },
   },
+  {
+    id: 4,
+    slug: 'trylo',
+    name: 'Trylo - Global eSIM Store',
+    desc: 'A traveler first eSIM marketplace for 190+ countries. Browse plans, pay, and receive an installable eSIM QR in seconds. Fully bilingual (ID and EN) with light and dark themes and animated, app like flows.',
+    tags: ['Next.js', 'i18n', 'Product'],
+    featured: false,
+    accent: false,
+    href: '/work/trylo',
+    liveUrl: 'https://trylo-two.vercel.app/',
+    bgText: '04',
+    bgTextColor: 'rgba(124,58,237,0.15)',
+    caseStudy: {
+      role: 'Product Designer & Frontend Developer',
+      timeline: 'Solo project - design to production',
+      stack: ['Next.js 15', 'React 19', 'Tailwind CSS', 'Framer Motion', 'qrcode.react', 'Client-side i18n (ID/EN)', 'Zustand-style store'],
+      overview:
+        'Trylo is a global eSIM store spanning the full purchase journey: a marketing landing page, a searchable plan catalog for 190+ countries, plan detail, checkout with vouchers and multiple payment methods, an order dashboard, and a live order detail screen that renders an installable eSIM QR code. Every screen is fully bilingual (Indonesian and English), supports light and dark themes, and uses Framer Motion so the experience feels like a native app rather than a static site.',
+      problem:
+        'Buying a travel eSIM is usually a confusing, English only checkout full of data units and coverage caveats that a first time traveler does not understand. The goal was to make the whole flow feel like a familiar consumer store: a shopper should go from landing to a scannable QR without ever wondering what a data cap or activation code means, in their own language.',
+      research: [
+        'Studied incumbent eSIM stores (Airalo, Holafly, Nomad) and catalogued where the flow leaks: jargon heavy plan cards, activation steps hidden after purchase, and no localized copy for Indonesian travelers.',
+        'Mapped the emotional arc of a traveler: excitement at booking, anxiety about connectivity on landing. The product needed to remove the landing anxiety by making activation obvious before purchase.',
+        'Decided bilingual support was not a nice to have but the core differentiator for the Indonesian market, so i18n was designed into every component from the start rather than bolted on.',
+      ],
+      decisions: [
+        {
+          title: 'Bilingual by architecture, not by afterthought',
+          detail:
+            'Every user facing string routes through a typed i18n dictionary with full ID and EN parity, toggled instantly client side and persisted to local storage. There are zero hardcoded strings across the app, so the language switch is total and never leaves a screen half translated.',
+        },
+        {
+          title: 'QR before the shopper has to ask',
+          detail:
+            'The order detail screen generates a real installable eSIM QR with qrcode.react, plus a manual activation code fallback and a one tap download. Activation is shown as a concrete, glanceable artifact instead of a wall of setup instructions.',
+        },
+        {
+          title: 'App like motion on every surface',
+          detail:
+            'Framer Motion drives page transitions, filter tabs, buttons, and modal entrances so the site reads as a polished mobile app. Motion is used to signal state changes (data usage bars, activation, deletion) rather than as decoration.',
+        },
+        {
+          title: 'One card grammar across the catalog',
+          detail:
+            'Plan cards, order cards, and checkout summaries share the same anatomy: flag, country, data and validity, price, action. Learning one screen teaches all of them, which keeps a large multi screen store feeling coherent from a solo build.',
+        },
+      ],
+      outcome:
+        'Shipped a complete, production deployed eSIM store covering landing, catalog, plan detail, checkout, orders, and live order detail with QR generation. The app reaches 100% i18n coverage in Indonesian and English, supports light and dark themes, and animates every previously static surface. A full consumer commerce flow, not a single screen demo.',
+      learnings:
+        'Localization is a product decision, not a translation pass. Designing the i18n dictionary up front forced clearer, shorter copy in both languages and exposed every place the UI leaned on English only assumptions. The other lesson was restraint with motion: animation earns its place when it explains a state change, and becomes noise when it does not.',
+    },
+  },
 ]
 
 export default projects
